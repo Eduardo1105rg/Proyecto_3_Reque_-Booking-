@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Moderadores</title>
+    <link rel="stylesheet" href="mod_styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+<body>
+    <header>
+        <h1>Solicitudes Pendientes</h1>
+    </header>
+    <main>
+        <section class="moderation-panel">
+            <input type="text" id="search-bar" placeholder="Buscar solicitudes...">
+            <div class="request" id="request1">
+                <h2>Nombre del Servicio 1</h2>
+                <button class="details-btn">Ver Detalles</button>
+                <button class="accept-btn">Aceptar</button>
+            </div>
+            <div class="request" id="request2">
+                <h2>Nombre del Servicio 2</h2>
+                <button class="details-btn">Ver Detalles</button>
+                <button class="accept-btn">Aceptar</button>
+            </div>
+
+            <div class="request" id="request3">
+                <h2>Nombre del Servicio 3</h2>
+                <button class="details-btn">Ver Detalles</button>
+                <button class="accept-btn">Aceptar</button>
+            </div>            
+            <!-- Más solicitudes -->
+        </section>
+        <section id="details-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Detalles del Servicio</h2>
+                <p>Información detallada sobre la solicitud.</p>
+            </div>
+        </section>
+    </main>
+    <script src="mod_script.js"></script>
+</body>
+</html>

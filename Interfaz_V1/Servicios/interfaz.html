@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Servicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Nombre del Servicio</h1>
+    </header>
+    
+    <main>
+        <section class="service-details">
+            <article class="service-info">
+                <h2>Nombre del Servicio</h2>
+                <p>Descripción del servicio.</p>
+
+                <!-- Galería de Imágenes -->
+                <div class="image-gallery">
+                    <img src="/imagenes/255616885.jpg" alt="Descripción de imagen 1" class="thumbnail" onclick="showImage(this)">
+                    <img src="/imagenes/288437524.jpg" alt="Descripción de imagen 2" class="thumbnail" onclick="showImage(this)">
+                    <img src="/imagenes/288437528.jpg" alt="Descripción de imagen 3" class="thumbnail" onclick="showImage(this)">
+                    <img src="/imagenes/288437695.jpg" alt="Descripción de imagen 4" class="thumbnail" onclick="showImage(this)">
+                    <img src="/imagenes/291671695.jpg" alt="Descripción de imagen 5" class="thumbnail" onclick="showImage(this)">
+                </div>
+
+                <div class="info">
+                    <p>Disponibilidad: <span>Disponible</span></p>
+                    <p>Empresa: <span>Nombre de la Empresa</span></p>
+                    <p>Precio: <span>$100</span></p>
+                    <p>Descuentos: <span>10% de descuento</span></p>
+                </div>
+                <div class="tools">
+                    <button class="buy">Pagar</button>
+                    <button class="reserve">Reservar</button>
+                    <button class="add-to-wishlist">Agregar a lista de deseados</button>
+                    <button class="add-to-package">Agregar a paquete</button>
+                </div>
+            </article>
+
+            <!-- Comentarios -->
+            <div class="comments">
+                <h3>Comentarios</h3>
+                <button class="opinion-btn">Opinar</button>
+                <form id="comment-form" class="hidden"> 
+                    <input type="text" id="username" placeholder="Nombre (opcional)"> 
+                    <input type="email" id="email" placeholder="Correo electrónico"> 
+                    <textarea id="comment" placeholder="Comentario"></textarea> 
+                    <button class="enviarBTN" type="submit">Enviar</button>
+                </form>
+                <div class="comment-section">
+                    <div class="comment">
+                        <p><strong>Usuario Anónimo:</strong> Excelente servicio!</p>
+                        <button class="like">Me gusta</button>
+                        <button class="dislike">No me gusta</button>
+                    </div>
+                    <!-- Más comentarios -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para Imagen Completa -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close" onclick="closeModal()">×</span>
+        <img id="fullImage" src="" alt="Imagen ampliada">
+    </div>
+
+
+    <footer class="footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="nosotros.html">Soporte</a>
+                <a href="anuncios.html">Pagina principal</a>
+                <!--<a href="blog.html"></a>-->
+                <!--<a href="contacto.html">Contacto</a>-->
+            </nav>
+        </div>
+
+        <p class="copyright">Todos los derechos Reservados 2024 &copy;</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

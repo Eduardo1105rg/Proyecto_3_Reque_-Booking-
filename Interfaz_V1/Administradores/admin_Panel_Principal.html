@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administradores</title>
+    <link rel="stylesheet" href="admin_styles.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Administradores</h1>
+    </header>
+    <main>
+        <div class="admin-panel">
+            <nav class="nav-tabs">
+                <button class="tab-btn" data-tab="permissions">Modificar Permisos</button>
+                <button class="tab-btn" data-tab="reports">Informes Generados</button>
+                <button class="tab-btn" data-tab="requests">Solicitudes Pendientes</button>
+            </nav>
+            <section id="permissions" class="tab-content">
+                <h2>Modificar Permisos de Moderadores</h2>
+                <p>Lista de moderadores con opciones para modificar permisos.</p>
+                <!-- Aquí se añadirían los elementos para modificar permisos -->
+            </section>
+
+            <section id="reports" class="tab-content hidden">
+                <h2>Informes Generados por Moderadores</h2>
+                <input type="text" id="search-reports" placeholder="Buscar informes...">
+                <div class="report">
+                    <h3>Informe 1</h3>
+                    <p>Resumen del informe 1.</p>
+                    <button class="view-report">Ver Informe</button>
+                </div>
+                <div class="report">
+                    <h3>Informe 2</h3>
+                    <p>Resumen del informe 2.</p>
+                    <button class="view-report">Ver Informe</button>
+                </div>
+                <!-- Más informes -->
+            </section>
+
+            <section id="requests" class="tab-content hidden">
+                <h2>Solicitudes Pendientes</h2>
+                <input type="text" id="search-requests" placeholder="Buscar solicitudes...">
+                <div class="request">
+                    <h3>Solicitud 1</h3>
+                    <p>Detalles de la solicitud 1.</p>
+                    <button class="view-request">Ver Solicitud</button>
+                </div>
+                <div class="request">
+                    <h3>Solicitud 2</h3>
+                    <p>Detalles de la solicitud 2.</p>
+                    <button class="view-request">Ver Solicitud</button>
+                </div>
+                <!-- Más solicitudes -->
+            </section>
+        </div>
+        
+        <section id="details-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Detalles</h2>
+                <p>Información detallada sobre el informe o solicitud seleccionada.</p>
+                <button class="approve">Aprobar</button>
+                <button class="reject">Rechazar</button>
+                <button class="cancel">Cancelar</button>
+            </div>
+        </section>
+    </main>
+    <script src="admin_script.js"></script>
+</body>
+</html>
