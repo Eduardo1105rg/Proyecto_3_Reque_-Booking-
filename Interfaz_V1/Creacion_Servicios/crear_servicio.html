@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Servicio</title>
+    <link rel="stylesheet" href="crear_servicio.css">
+</head>
+<body>
+    <header>
+        <h1>Crear Nuevo Servicio</h1>
+    </header>
+    <main>
+        <form id="create-service-form">
+            <label for="activity-type">Tipo de Actividad:</label>
+            <select id="activity-type" name="activity-type" required>
+                <option value="">Seleccione una opción</option>
+                <option value="hospedaje">Hospedaje</option>
+                <option value="tours">Tours</option>
+                <option value="alimentacion">Alimentación</option>
+                <option value="transporte">Transporte</option>
+            </select>
+            
+            <label for="service-name">Nombre del Servicio:</label>
+            <input type="text" id="service-name" name="service-name" required>
+            
+            <label for="location">Ubicación:</label>
+            <input type="text" id="location" name="location" required>
+            
+            <label for="contact-info">Información de Contacto:</label>
+            <input type="text" id="contact-info" name="contact-info" required>
+            
+            <label for="payment-account">Cuenta de Pago:</label>
+            <input type="text" id="payment-account" name="payment-account" required>
+            
+            <label for="price">Precio:</label>
+            <input type="number" id="price" name="price" required>
+            
+            <label for="availability">Disponibilidad:</label>
+            <input type="text" id="availability" name="availability" required>
+            
+            <label for="description">Descripción del Servicio:</label>
+            <textarea id="description" name="description" required></textarea>
+            
+            <label for="discount">Descuentos:</label>
+            <input type="text" id="discount" name="discount">
+            
+            <label for="images">Imágenes (mínimo 5):</label>
+            <input type="file" id="images" name="images" accept="image/*" multiple required>
+            
+            <label for="document">Documento PDF:</label>
+            <input type="file" id="document" name="document" accept="application/pdf" required>
+            
+            <div class="form-buttons">
+                <button type="button" class="cancel">Cancelar</button>
+                <button type="submit" class="submit">Enviar</button>
+            </div>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
