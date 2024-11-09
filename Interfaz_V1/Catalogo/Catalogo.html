@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Catalogo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="divEncabezado">
+        <div class="contenedorEncabezado">
+            <h1>Catalogo de Servicios</h1>
+            <div class="espacioInput">
+                <input id="buscar" placeholder="Buscar" class="input" name="text" type="text">
+                <i onclick="buscar()" class="fa fa-search iconoLupa"></i>
+            </div>
+            <button onclick=mostrarFichasServicios() class="btn"><i class="fa fa-home"></i> Servicios</button>
+            <button onclick=mostrarFichasPaquetes() class="btn"><i class="fa fa-bars"></i> Paquetes</button>
+            <button onclick=mostrarFichasEmpresas() class="btn"><i class="fa fa-bars"></i> Empresas</button>
+            <button onclick=mostrarTodos() class="btn"><i class="fa fa-bars"></i> Todos</button>
+            <button onclick=mostrarFiltros() id="filtros" class="btn"><i class="fa fa-bars"></i> Activar Filtros</button>
+            <div class="drop">
+                <button onclick=dropFiltros() class="botonDrop">Filtros</button>
+                <div id="opcionesFiltros" class="opciones">
+                    <select id="filtrosCombo" onchange=mostrar(value)>
+                        <option value="">Selecciona una opción</option>
+                        <option value="ubicaciones">Ubicaciones</option>
+                        <option value="servicios">Servicios</option>
+                        <option value="paquetes">Paquetes</option>
+                    </select>
+                    <div id="opcionesUbicaciones" class="checkboxes-opciones" style="display: none;">
+                        <label><input type="checkbox" name="ubicacion" value="Limon"> Limon</label><br>
+                        <label><input type="checkbox" name="ubicacion" value="San Jose"> San Jose</label><br>
+                        <label><input type="checkbox" name="ubicacion" value="Guanacaste"> Guanacaste</label><br>
+                        <label><input type="checkbox" name="ubicacion" value="Alajuela"> Alajuela</label><br>
+                        <label><input type="checkbox" name="ubicacion" value="Heredia"> Heredia</label><br>
+                        <label><input type="checkbox" name="ubicacion" value="Cartago"> Cartago</label><br>
+                        <label><input type="checkbox" name="ubicacion" value="Puntarenas"> Puntarenas</label><br>
+                    </div>
+                    <div id="opcionesServicios" class="checkboxes-opciones" style="display: none;">
+                        <label><input type="checkbox" name="ubicacion" value="Hoteles"> Hoteles</label><br>
+                        <label><input type="checkbox" name="ubicacion" value="Tours"> Tours</label><br>
+                        <label><input type="checkbox" name="ubicacion" value="Restaurantes"> Restaurantes</label><br>
+                        <label><input type="checkbox" name="ubicacion" value="Otros"> Otros</label><br>
+                    </div>
+                    <div id="opcionesPaquetes" class="checkboxes-opciones" style="display: none;">
+                        <label><input type="checkbox" name="ubicacion" value="Individual"> Individual</label><br>
+                        <label><input type="checkbox" name="ubicacion" value="Paquete"> Paquete</label><br>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="divPagina">
+        <div class="contenedorPagina">
+            <div class="ficha" id="Servicio">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Limon</p>
+                <p id="Precio">50 peso</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Servicio">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Limon</p>
+                <p id="Precio">50 peso</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Servicio">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Limon</p>
+                <p id="Precio">50 peso</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Paquete">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Limon</p>
+                <p id="Precio">50 peso</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Paquete">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Limon</p>
+                <p id="Precio">50 peso</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Paquete">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Limon</p>
+                <p id="Precio">50 peso</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Paquete">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Limon</p>
+                <p id="Precio">50 peso</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Servicio">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Limon</p>
+                <p id="Precio">50 peso</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Servicio">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Limon</p>
+                <p id="Precio">50 peso</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+        </div>
+    </div>
+    <div onclick=mostrarFormulario() class="divFormulario">
+        <h1>¿Necesitas ayuda o quieres compartir tu experiencia con nosotros?</h1>
+        <h2>Haz clic aquí para contarnos tu situación</h2>
+    </div>
+    <div class="contenedorFormulario" id="formulario">
+        <h2>Formulario de Contacto</h2>
+        <form action="#" method="post">
+            <input type="text" class="input" placeholder="Nombre" required>
+            <input type="email" class="input" placeholder="Correo Electrónico" required>
+            <textarea class="input mensaje" placeholder="Comentario/Experiencia" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+        <button onclick=cerrarFormulario() class="btnCerrar">Cerrar</button>
+    </div>
+
+    <script>
+        function mostrarFichasServicios() {
+            const paquetes = document.querySelectorAll(".ficha#Paquete");
+            paquetes.forEach(paquete => {
+                paquete.style.display = "none";
+            });
+
+            const empresas = document.querySelectorAll(".ficha#Empresa");
+            empresas.forEach(empresa => {
+                empresa.style.display = "none";
+            });
+
+            const servicios = document.querySelectorAll(".ficha#Servicio");
+            servicios.forEach(servicio => {
+                servicio.style.display = "block";
+            });
+        }
+
+        function mostrarFichasPaquetes() {
+            const servicios = document.querySelectorAll(".ficha#Servicio");
+            servicios.forEach(servicio => {
+                servicio.style.display = "none";
+            });
+
+            const empresas = document.querySelectorAll(".ficha#Empresa");
+            empresas.forEach(empresa => {
+                empresa.style.display = "none";
+            });
+
+            const paquetes = document.querySelectorAll(".ficha#Paquete");
+            paquetes.forEach(paquete => {
+                paquete.style.display = "block";
+            });
+        }
+
+        function mostrarFichasEmpresas() {
+            const servicios = document.querySelectorAll(".ficha#Servicio");
+            servicios.forEach(servicio => {
+                servicio.style.display = "none";
+            });
+
+            const paquetes = document.querySelectorAll(".ficha#Paquete");
+            paquetes.forEach(paquete => {
+                paquete.style.display = "none";
+            });
+
+            const empresas = document.querySelectorAll(".ficha#Empresa");
+            empresas.forEach(empresa => {
+                empresa.style.display = "block";
+            });
+
+        }
+
+        function mostrarTodos() {
+            const paquetes = document.querySelectorAll(".ficha#Servicio");
+            paquetes.forEach(paquete => {
+                paquete.style.display = "block";
+            });
+
+            const servicios = document.querySelectorAll(".ficha#Paquete");
+            servicios.forEach(servicio => {
+                servicio.style.display = "block";
+            });
+        }
+
+        function buscar() {
+            var flag = 0;
+            var botonFiltro = document.getElementById("filtros");
+            if (botonFiltro.innerText === "Desactivar Filtros") {
+                flag = 1;
+            }
+            const textoBusqueda = document.getElementById("buscar").value.toLowerCase();
+
+            const ubicacionesSeleccionadas = Array.from(document.querySelectorAll('#opcionesUbicaciones input[type="checkbox"]:checked')).map(cb => cb.value);
+            const serviciosSeleccionados = Array.from(document.querySelectorAll('#opcionesServicios input[type="checkbox"]:checked')).map(cb => cb.value);
+            const paquetesSeleccionados = Array.from(document.querySelectorAll('#opcionesPaquetes input[type="checkbox"]:checked')).map(cb => cb.value);
+
+            const fichas = document.querySelectorAll(".ficha");
+
+            fichas.forEach(ficha => {
+                const titulo = ficha.querySelector("h1").textContent.toLowerCase();
+                const ubicacion = ficha.querySelector("#Ubicacion").textContent.trim();
+                const tipo = ficha.id;
+
+                const coincideBusqueda = titulo.includes(textoBusqueda);
+
+                const coincideUbicacion = ubicacionesSeleccionadas.length === 0 || ubicacionesSeleccionadas.includes(ubicacion);
+                const coincideServicio = serviciosSeleccionados.length === 0 || (tipo === "Servicio" && serviciosSeleccionados.includes(titulo));
+                const coincidePaquete = paquetesSeleccionados.length === 0 || (tipo === "Paquete" && paquetesSeleccionados.includes(titulo));
+                if (flag === 1) {
+                    if (coincideBusqueda && coincideUbicacion && (coincideServicio || coincidePaquete)) {
+                        ficha.style.display = "block";
+                    } else {
+                        ficha.style.display = "none";
+                    }
+                }
+                else {
+                    if (coincideBusqueda) {
+                        ficha.style.display = "block";
+                    } else {
+                        ficha.style.display = "none";
+                    }
+                }
+            });
+        }
+
+
+        function mostrarFormulario() {
+            document.getElementById("formulario").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function cerrarFormulario() {
+            document.getElementById("formulario").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+
+        function mostrarFiltros() {
+            var botones = document.getElementsByClassName("botonDrop");
+            var botonFiltro = document.getElementById("filtros");
+
+            for (let i = 0; i < botones.length; i++) {
+                if (botones[i].style.display === "none") {
+                    botonFiltro.textContent = "Desactivar Filtros";
+                    botones[i].style.display = "block";
+                } else {
+                    botonFiltro.textContent = "Activar Filtros";
+                    botones[i].style.display = "none";
+                }
+            }
+        }
+
+        function dropFiltros() {
+            var opciones = document.getElementById("opcionesFiltros");
+            if (opciones.style.display === "block") {
+                opciones.style.display = "none";
+            } else {
+                opciones.style.display = "block";
+            }
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.botonDrop') && !event.target.closest('#opcionesFiltros')) {
+                var opciones = document.getElementById("opcionesFiltros");
+                if (opciones.style.display === "block") {
+                    opciones.style.display = "none";
+                }
+            }
+        }
+
+        function mostrar(value) {
+            if (value == "servicios") {
+                mostrarServicios()
+            }
+            else if (value == "ubicaciones") {
+                mostrarProvincias()
+            }
+            else if (value == "paquetes") {
+                mostrarPaquetes()
+            }
+            else {
+                return
+            }
+        }
+
+        function mostrarProvincias() {
+            var opcionesServicios = document.getElementById("opcionesServicios");
+            if (opcionesServicios.style.display === "block") {
+                opcionesServicios.style.display = "none";
+            }
+
+            var opcionesPaquetes = document.getElementById("opcionesPaquetes");
+            if (opcionesPaquetes.style.display === "block") {
+                opcionesPaquetes.style.display = "none";
+            }
+
+            var opcionesUbicaciones = document.getElementById("opcionesUbicaciones");
+            if (opcionesUbicaciones.style.display === "none" || opcionesUbicaciones.style.display === "") {
+                opcionesUbicaciones.style.display = "block";
+            } else {
+                opcionesUbicaciones.style.display = "none";
+            }
+        }
+
+        function mostrarServicios() {
+            var opcionesServicios = document.getElementById("opcionesUbicaciones");
+            if (opcionesServicios.style.display === "block") {
+                opcionesServicios.style.display = "none";
+            }
+
+            var opcionesPaquetes = document.getElementById("opcionesPaquetes");
+            if (opcionesPaquetes.style.display === "block") {
+                opcionesPaquetes.style.display = "none";
+            }
+
+            var opcionesServicios = document.getElementById("opcionesServicios");
+            if (opcionesServicios.style.display === "none" || opcionesServicios.style.display === "") {
+                opcionesServicios.style.display = "block";
+            } else {
+                opcionesServicios.style.display = "none";
+            }
+        }
+
+        function mostrarPaquetes() {
+            var opcionesServicios = document.getElementById("opcionesServicios");
+            if (opcionesServicios.style.display === "block") {
+                opcionesServicios.style.display = "none";
+            }
+
+            var opcionesServicios = document.getElementById("opcionesUbicaciones");
+            if (opcionesServicios.style.display === "block") {
+                opcionesServicios.style.display = "none";
+            }
+
+            var opcionesPaquetes = document.getElementById("opcionesPaquetes");
+            if (opcionesPaquetes.style.display === "none" || opcionesPaquetes.style.display === "") {
+                opcionesPaquetes.style.display = "block";
+            } else {
+                opcionesPaquetes.style.display = "none";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
