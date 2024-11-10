@@ -34,14 +34,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     approveButton.addEventListener('click', function() {
-        alert('Solicitud aprobada.');
+        Swal.fire({
+            title: 'Solicitud aprobada',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
         modal.classList.add('hidden');
     });
-
+    
     rejectButton.addEventListener('click', function() {
-        alert('Solicitud rechazada.');
+        Swal.fire({
+            title: 'Solicitud rechazada',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
         modal.classList.add('hidden');
     });
+    ;
 
     searchReports.addEventListener('input', function() {
         const filter = searchReports.value.toLowerCase();
