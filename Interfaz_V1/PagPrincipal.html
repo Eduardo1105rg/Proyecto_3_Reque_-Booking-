@@ -6,11 +6,12 @@
     <title>Vámonos de viaje</title>
     <link rel="stylesheet" href="PrincipalEstilo.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
     <div class="LogoInicio">
         <img src="Imagenes/Logo.png" alt="Logo de la página" style="height: 40px; margin-left: -650px; margin-top: -90px;">
     </div>
-</head>
-<body>
     <div class="boxUser">
         <i class='bx bxs-user-rectangle' id="userIcon"></i> 
         <div class="MenuAbajo" id="MenuAbajo" style="display: none;"> 
@@ -40,36 +41,12 @@
             </div>
         </div>
     </div>
+    
 
-    <script>
-        const userIcon = document.getElementById("userIcon");
-        const MenuAbajo = document.getElementById("MenuAbajo");
-        
-        userIcon.addEventListener("click", function() {
-            MenuAbajo.style.display = MenuAbajo.style.display === "block" ? "none" : "block";
-        });
-        
-        const lenguajesIcon = document.getElementById("lenguajesIcon");
-        const MenuAbajoLen = document.getElementById("MenuAbajoLen");
-        
-        lenguajesIcon.addEventListener("click", function() {
-            MenuAbajoLen.style.display = MenuAbajoLen.style.display === "block" ? "none" : "block";
-        });
-        
-        window.addEventListener("click", function(event) {
-            if (!userIcon.contains(event.target) && !MenuAbajo.contains(event.target)) {
-                MenuAbajo.style.display = "none";
-            }
-            if (!lenguajesIcon.contains(event.target) && !MenuAbajoLen.contains(event.target)) {
-                MenuAbajoLen.style.display = "none";
-            }
-        });
-    </script>
+   
 
     <h1>¡Vámonos de viaje!</h1>
-    <div>
-        <a href="Catalogo/Catalogo.html" class="btn-catalogo">Catálogo</a>
-    </div>
+
 
     <section class="historia">
         <h2>Nuestro Comienzo</h2>
@@ -223,9 +200,115 @@ setInterval(showTopSlides, 3000); // Esto es cada 3 segundos
     </div>
 </section>
 
+<div class="btns botonesGenerales">
+    <button id="inicioSesionBtn" onclick="irAPaginaSesion()">Iniciar sesión</button>
+    <button id="catalogoBtn" onclick="irAPaginaCatalogo()">Catálogo</button>
+    <button id="deseosBtn" onclick="irAPaginaDeseos()">Mis deseos</button>
+    <button id="verPerfilBtn" onclick="irAPaginaVerEmpresas()">Ver perfil empresa</button>
+    <button id="verPerfilEmpresaBtn" onclick="irAPaginaEmpresa()">Ver perfil</button>
+    <button id="adminPanelBtn" onclick="irAPaginaAdmin()">Panel Administrador</button>
+    <button id="modPanelBtn" onclick="irAPaginaModeradores()">Panel Moderador</button>
+</div>
+
+<script>
+    window.onload = function() {
+        var userType = sessionStorage.getItem("userType");
+
+        var inicioSesionBtn = document.getElementById("inicioSesionBtn");
+        var catalogoBtn = document.getElementById("catalogoBtn");
+        var deseosBtn = document.getElementById("deseosBtn");
+        var verPerfilBtn = document.getElementById("verPerfilBtn");
+        var verPerfilEmpreBtn = document.getElementById("verPerfilEmpresaBtn");
+        var adminPanelBtn = document.getElementById("adminPanelBtn");
+        var modPanelBtn = document.getElementById("modPanelBtn");
+
+        if (userType === "usuario") {
+            catalogoBtn.style.display = "block";
+            deseosBtn.style.display = "block";
+            verPerfilBtn.style.display = "block";
+            verPerfilEmpreBtn = "none";
+            adminPanelBtn.style.display = "none";
+            modPanelBtn.style.display = "none";
+        } else if (userType === "empresa") {
+            catalogoBtn.style.display = "block";
+            deseosBtn.style.display = "none";
+            verPerfilBtn.style.display = "none";
+            verPerfilEmpreBtn = "block";
+            adminPanelBtn.style.display = "none";
+            modPanelBtn.style.display = "none";
+        } else if (userType === "administrador") {
+            catalogoBtn.style.display = "block";
+            deseosBtn.style.display = "none";
+            verPerfilBtn.style.display = "block";
+            verPerfilEmpreBtn = "block";
+            adminPanelBtn.style.display = "block";
+            modPanelBtn.style.display = "block";
+        } else if (userType === "moderador") {
+            catalogoBtn.style.display = "block";
+            deseosBtn.style.display = "none";
+            verPerfilBtn.style.display = "block";
+            verPerfilEmpreBtn = "block";
+            adminPanelBtn.style.display = "none";
+            modPanelBtn.style.display = "block";
+        }
+    };
+</script>
+
+<script>
+    const userIcon = document.getElementById("userIcon");
+    const MenuAbajo = document.getElementById("MenuAbajo");
+    
+    userIcon.addEventListener("click", function() {
+        MenuAbajo.style.display = MenuAbajo.style.display === "block" ? "none" : "block";
+    });
+    
+    const lenguajesIcon = document.getElementById("lenguajesIcon");
+    const MenuAbajoLen = document.getElementById("MenuAbajoLen");
+    
+    lenguajesIcon.addEventListener("click", function() {
+        MenuAbajoLen.style.display = MenuAbajoLen.style.display === "block" ? "none" : "block";
+    });
+    
+    window.addEventListener("click", function(event) {
+        if (!userIcon.contains(event.target) && !MenuAbajo.contains(event.target)) {
+            MenuAbajo.style.display = "none";
+        }
+        if (!lenguajesIcon.contains(event.target) && !MenuAbajoLen.contains(event.target)) {
+            MenuAbajoLen.style.display = "none";
+        }
+    });
+</script>
 
 
+<script>
+function irAPaginaSesion() {
+    window.location.href = "InicioSesion/InicioSesion.html";
+}
 
+function irAPaginaCatalogo() {
+    window.location.href = "Catalogo/Catalogo.html"; 
+}
 
+function irAPaginaDeseos() {
+    window.location.href = "ruta-a-deseos.html";
+}
+
+function irAPaginaVerEmpresas() {
+    window.location.href = "Empresas/PerfilEmpresaUsuario.html"; 
+}
+
+function irAPaginaEmpresa() {
+    window.location.href = "Empresas/PerfilSoloEmpresa.html"; 
+}
+
+function irAPaginaAdmin() {
+    window.location.href = "Administradores/admin_Panel_Principal.html";
+}
+
+function irAPaginaModeradores() {
+    window.location.href = "Moderadores/moderadores_Aceptar_Encargo.html"; 
+}
+
+</script>
 </body>
 </html>

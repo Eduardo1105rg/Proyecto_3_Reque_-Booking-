@@ -14,8 +14,8 @@
     </div>
 
     <div class="buttons">
-        <button>Registrar</button>
-        <button>Modificar</button>
+        <button id="registroPaqueteBtn" onclick="irARegistrarPaquete()">Registrar</button>
+        <button id="modificarPaqueteBtn" onclick="irAModificarPaquete()">Modificar</button>
     </div>
 
     <h2>Mis Servicios</h2>
@@ -58,7 +58,6 @@
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
-    
 
     <h2>Mis Paquetes</h2>
     <p>Consulta nuestros paquetes personalizados para satisfacer tus necesidades: [detalles de los paquetes].</p>
@@ -78,6 +77,16 @@
             const slider = document.querySelector(".slider");
             slider.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
+    </script>
+
+    <script>
+function irARegistrarPaquete() {
+    window.location.href = "../Paquetes/CreacionPaquete.html"; 
+}
+    
+function irAModificarPaquete() {
+    window.location.href = "../Paquetes/EdicionPaquete.html"; 
+}
     </script>
 </body>
 </html>

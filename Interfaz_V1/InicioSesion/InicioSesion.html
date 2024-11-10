@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
@@ -13,29 +13,41 @@
 <body>
 
     <div class="Log">
-        <form id="loginForm"> 
-            <h1>Inicio de sesión</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Nombre de usuario" required>
-                <i class='bx bxs-user'></i>
-            </div>
+<form id="loginForm">
+    <h1>Inicio de sesión</h1>
 
-            <div class="input-box">
-                <input type="password" placeholder="Contraseña" required>
-                <i class='bx bx-lock-alt'></i>
-            </div>
+    <div class="input-box">
+        <input type="text" placeholder="Nombre de usuario" required>
+        <i class='bx bxs-user'></i>
+    </div>
 
-            <div class="MantenerSesion">
-                <label><input type="checkbox">Mantener sesión</label>
-                <a href="#">¿Se te olvido la contraseña?</a>
-            </div>
+    <div class="input-box">
+        <input type="password" placeholder="Contraseña" required>
+        <i class='bx bx-lock-alt'></i>
+    </div>
 
-            <button type="submit" class="btn">Ingresar</button>
+    <div class="input-box">
+        <label for="userType">Tipo de usuario:</label>
+        <select id="userType" required>
+            <option value="usuario">Usuario</option>
+            <option value="empresa">Empresa</option>
+            <option value="administrador">Administrador</option>
+            <option value="moderador">Moderador</option>
+        </select>
+    </div>
 
-            <div class="register-link">
-                <p>Registrar una cuenta <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Registrar</a></p>
-            </div>
-        </form>
+    <div class="MantenerSesion">
+        <label><input type="checkbox"> Mantener sesión</label>
+        <a href="#">¿Se te olvidó la contraseña?</a>
+    </div>
+
+    <button type="submit" class="btn">Ingresar</button>
+
+    <div class="register-link">
+        <p>Registrar una cuenta <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Registrar</a></p>
+    </div>
+</form>
+
     </div>
 
     <!-- Modal de Registro -->
@@ -53,16 +65,17 @@
                             <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" required>
                         </div>
                         <div class="mb-3">
-                            <label for="info1" class="form-label">Nombre completo</label>
+                            <label for="name" class="form-label">Nombre completo</label>
                             <input type="text" class="form-control" id="name" placeholder="Nombre completo" required>
                         </div>
                         <div class="mb-3">
-                            <label for="info2" class="form-label">Fecha de nacimiento</label>
+                            <label for="date" class="form-label">Fecha de nacimiento</label>
                             <input type="date" class="form-control" id="date" placeholder="Fecha de nacimiento" required>
                         </div>
                         <div class="mb-3">
                             <label for="PhoneNumber" class="form-label">Número de celular</label>
                             <input type="tel" class="form-control" id="PhoneNumber" placeholder="Número de celular" pattern="[0-9]{8}" maxlength="8" required>
+                        </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Correo electrónico</label>
                             <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
@@ -82,32 +95,43 @@
         </div>
     </div>
 
-    <!--Este es para pasar a la página principal-->
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault(); 
+
+            var userType = document.getElementById("userType").value;
+
+            sessionStorage.setItem("userType", userType);
+
             window.location.href = "../PagPrincipal.html";
         });
-
     </script>
-
-
-
-    <!--Este es para verificar las contraseñas-->
 
     <script>
         document.getElementById("registerForm").addEventListener("submit", function(event) {
             var password = document.getElementById("password").value;
             var confirmPassword = document.getElementById("confirmPassword").value;
 
-            // Aqui revisamos si son iguales
             if (password !== confirmPassword) {
                 event.preventDefault(); 
                 alert("Las contraseñas no coinciden. Por favor, ingrésalas nuevamente.");
             }
         });
     </script>
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        var userType = document.getElementById("userType").value;
+
+        sessionStorage.setItem("userType", userType);
+
+        window.location.href = "../PagPrincipal.html";
+    });
+</script>
+
+
 
 
 </body>
-</html>
+</html> 

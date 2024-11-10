@@ -330,3 +330,26 @@ body {
     background-color: #d1f0e9;
     border-radius: 5px;
 }
+
+.botonesGenerales {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    margin-top: 20px;
+    flex-wrap: wrap; 
+}
+
+.botonesGenerales button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botonesGenerales button:hover {
+    background-color: #45a049;
+}
