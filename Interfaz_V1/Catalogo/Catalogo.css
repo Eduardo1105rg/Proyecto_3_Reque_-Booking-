@@ -1,0 +1,234 @@
+html, body {
+    overflow-y: scroll hidden;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    font-size: 8vh;
+}
+  
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 3vh;
+    margin: 0;
+}
+.divEncabezado {
+    height: 25vh;
+    background-image: url(Imagenes/encabezado1.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+.contenedorEncabezado {
+    text-align: center;
+    backdrop-filter: contrast(50%);
+    border-radius: 10vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+
+.espacioInput {
+    width: 94vh;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+    margin-top: 15px;
+}
+
+.input {
+    width: 90vh;
+    height: 4vh;
+    border: none;
+    outline: none;
+    caret-color: rgb(255, 81, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding-left: 15px;
+    letter-spacing: 0.8px;
+    color: rgb(19, 19, 19);
+    font-size: 13.4px;
+}
+
+.iconoLupa {
+    font-size: 16px;
+    color: rgb(150, 150, 150);
+    margin-left: -25px;
+    cursor: pointer;
+}
+
+.btn {
+    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    border: none;
+    color: rgb(113, 113, 113);
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 1vh;
+    border-radius: 16px;
+}
+
+.botonDrop {
+    display: none;
+    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    border: none;
+    color: rgb(113, 113, 113);
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 1vh;
+    border-radius: 16px;
+}
+
+.drop {
+    position: relative; /* Necesario para posicionar elementos dentro de este contenedor */
+    display: inline-block;
+}
+
+.opciones {
+    display: none; /* Inicialmente ocultas */
+    position: absolute; /* Posicionamiento absoluto para ubicarlas a la derecha */
+    left: 100%; /* 100% del ancho del botón para colocar a la derecha */
+    top: 0; /* Alineado con el botón */
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 200px;
+}
+
+.opciones a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.checkboxes-opciones {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+.checkboxes-opciones label {
+    display: block;
+    margin: 5px 0;
+    background-color: #000;
+}
+
+.divPagina {
+    display: grid;
+    background-color: rgb(225, 225, 225);
+    height: 75vh, auto;
+    
+}
+
+.contenedorPagina {
+    border-radius: 10vh;
+    height: 75vh, auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 5vh;
+    background-color: rgb(115, 115, 115);
+    padding: 4vh;
+    
+}
+
+.ficha {
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    
+}
+  
+.precio {
+    color: grey;
+    font-size: 22px;
+}
+
+.ficha button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.ficha button:hover {
+    opacity: 70%;
+}
+
+.divFormulario {
+    height: 30vh;
+    background-color: brown;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+#formulario {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.contenedorFormulario h2 {
+    text-align: center;
+    color: #333;
+}
+
+.contenedorFormulario .input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+#formulario .btnCerrar {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contenedorFormulario .mensaje {
+    height: 100px;
+    resize: none;
+}
