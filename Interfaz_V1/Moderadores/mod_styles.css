@@ -1,47 +1,47 @@
-/* General Styles */
+/* Estilos Generales */
 body {
-    font-family: 'Times New Roman', Arial, sans-serif;
-    /*background-color: #f3f4f6;*/
-    background-color: #ddd6cc;
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f1e8; /* Fondo suave, similar a un tono de naturaleza */
     margin: 0;
     padding: 0;
 }
 
-/* Header Styles */
+/* Header */
 header {
-    /*background-color: #204f22;*/
-    background-color: #586232;
+    background-color: #5a7d5a; /* Verde musgo */
     color: white;
     text-align: center;
     padding: 0.2em 0;
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Moderation Panel */
+/* Panel de Moderación */
 .moderation-panel {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2em;
-    background-color: #FEF9E0;
+    background-color: #fbfdf9; /* Fondo claro y acogedor */
+    border-top: 3px solid #b2d0b2; /* Línea decorativa */
 }
 
+/* Barra de búsqueda */
 #search-bar {
     width: 80%;
-    padding: 0.7em;
-    margin: 1em 0;
-    border-radius: 6px;
-    border: 1px solid #ddd;
+    padding: 0.8em;
+    margin: 1.5em 0;
+    border-radius: 10px;
+    border: 1px solid #c3d9c3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
 }
 
-/* Request Cards */
+/* Tarjetas de Solicitud */
 .request {
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border: 1px solid #c3d9c3;
     border-radius: 12px;
     margin: 1em;
     padding: 1.5em;
@@ -51,22 +51,26 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    color: #4f5f4f;
 }
 
 .request:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Efecto sutil al pasar el cursor */
 }
 
-/* Button Styles */
+/* Botones */
 button {
     margin: 0.5em;
-    padding: 0.7em 1.5em;
+    padding: 0.6em 1.4em;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
+    color: white;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -75,54 +79,58 @@ button:hover {
 }
 
 .details-btn {
-    background-color: #1e88e5;
-    color: white;
+    background-color: #4d9aaf; /* Azul inspirado en agua */
 }
 
 .accept-btn {
-    background-color: #43a047;
-    color: white;
+    background-color: #227050; /* Verde naturaleza */
 }
 
-/* Modal Styles */
+/* Modal */
 .modal {
-    /*display: none;*/
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
 }
 
 .modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    background-color: #ffffff;
+    padding: 2em;
+    border: 1px solid #aaa;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     max-width: 500px;
-    border-radius: 8px;
+    width: 80%;
     text-align: center;
+    position: relative;
 }
 
 .close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    color: #666;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5em;
     cursor: pointer;
 }
 
-.close-button:hover,
-.close-button:focus {
-    color: black;
+.close-button:hover {
+    color: #333;
 }
 
+/* Clases adicionales */
 .hidden {
     display: none;
 }
 
+.redirecC{
+    background-color: #227050;
+
+}
