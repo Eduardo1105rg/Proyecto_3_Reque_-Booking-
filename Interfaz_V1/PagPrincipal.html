@@ -211,47 +211,51 @@ setInterval(showTopSlides, 3000); // Esto es cada 3 segundos
 </div>
 
 <script>
-    window.onload = function() {
-        var userType = sessionStorage.getItem("userType");
+window.onload = function() {
+    var userType = sessionStorage.getItem("userType");
 
-        var inicioSesionBtn = document.getElementById("inicioSesionBtn");
-        var catalogoBtn = document.getElementById("catalogoBtn");
-        var deseosBtn = document.getElementById("deseosBtn");
-        var verPerfilBtn = document.getElementById("verPerfilBtn");
-        var verPerfilEmpreBtn = document.getElementById("verPerfilEmpresaBtn");
-        var adminPanelBtn = document.getElementById("adminPanelBtn");
-        var modPanelBtn = document.getElementById("modPanelBtn");
+    var inicioSesionBtn = document.getElementById("inicioSesionBtn");
+    var catalogoBtn = document.getElementById("catalogoBtn");
+    var deseosBtn = document.getElementById("deseosBtn");
+    var verPerfilBtn = document.getElementById("verPerfilBtn");
+    var verPerfilEmpreBtn = document.getElementById("verPerfilEmpresaBtn");
+    var adminPanelBtn = document.getElementById("adminPanelBtn");
+    var modPanelBtn = document.getElementById("modPanelBtn");
 
-        if (userType === "usuario") {
-            catalogoBtn.style.display = "block";
-            deseosBtn.style.display = "block";
-            verPerfilBtn.style.display = "block";
-            verPerfilEmpreBtn = "none";
-            adminPanelBtn.style.display = "none";
-            modPanelBtn.style.display = "none";
-        } else if (userType === "empresa") {
-            catalogoBtn.style.display = "block";
-            deseosBtn.style.display = "none";
-            verPerfilBtn.style.display = "none";
-            verPerfilEmpreBtn = "block";
-            adminPanelBtn.style.display = "none";
-            modPanelBtn.style.display = "none";
-        } else if (userType === "administrador") {
-            catalogoBtn.style.display = "block";
-            deseosBtn.style.display = "none";
-            verPerfilBtn.style.display = "block";
-            verPerfilEmpreBtn = "block";
-            adminPanelBtn.style.display = "block";
-            modPanelBtn.style.display = "block";
-        } else if (userType === "moderador") {
-            catalogoBtn.style.display = "block";
-            deseosBtn.style.display = "none";
-            verPerfilBtn.style.display = "block";
-            verPerfilEmpreBtn = "block";
-            adminPanelBtn.style.display = "none";
-            modPanelBtn.style.display = "block";
-        }
-    };
+    if (userType === "usuario") {
+        catalogoBtn.style.display = "block";
+        deseosBtn.style.display = "block";
+        verPerfilBtn.style.display = "block";
+        verPerfilEmpreBtn.style.display = "none";
+        adminPanelBtn.style.display = "none";
+        modPanelBtn.style.display = "none";
+
+    } else if (userType === "empresa") {
+        catalogoBtn.style.display = "block";
+        deseosBtn.style.display = "none";
+        verPerfilBtn.style.display = "none";
+        verPerfilEmpreBtn.style.display = "block";
+        adminPanelBtn.style.display = "none";
+        modPanelBtn.style.display = "none";
+
+    } else if (userType === "administrador") {
+        catalogoBtn.style.display = "block";
+        deseosBtn.style.display = "none";
+        verPerfilBtn.style.display = "block";
+        verPerfilEmpreBtn.style.display = "none";
+        adminPanelBtn.style.display = "block";
+        modPanelBtn.style.display = "block";
+        
+    } else if (userType === "moderador") {
+        catalogoBtn.style.display = "block";
+        deseosBtn.style.display = "none";
+        verPerfilBtn.style.display = "block";
+        verPerfilEmpreBtn.style.display = "none";
+        adminPanelBtn.style.display = "none";
+        modPanelBtn.style.display = "block";
+    }
+};
+
 </script>
 
 <script>
