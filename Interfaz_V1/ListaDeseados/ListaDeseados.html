@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ListaDeseados.css">
+</head>
+
+<body>
+    <div class="divEncabezado">
+        <div class="contenedorEncabezado">
+            <h1>Lista de Deseos</h1>
+            <div class="espacioInput">
+            </div>
+            <button onclick=mostrarFichasServicios() class="btn"></i> Servicios</button>
+            <button onclick=mostrarFichasPaquetes() class="btn"></i> Paquetes</button>
+        </div>
+    </div>
+    <div class="divPagina">
+        <div class="contenedorPagina" id="contenedorPagina">
+            <div class="ficha" id="Servicio">
+                <img src=Imagenes\encabezado.jpg alternative="Imagen" style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Limon</p>
+                <p id="Precio">50 peso</p>
+                <p id="Tipo">Paquete</p>
+                <p id="TipoServicio">Hotel</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Paquete">
+                <img src=Imagenes\encabezado.jpg alternative="Imagen" style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Limon</p>
+                <p id="Precio">50 peso</p>
+                <p id="Tipo">Individual</p>
+                <p id="TipoServicio">Tour</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function mostrarFichasServicios() {
+            const contenedorPagina = document.getElementById("contenedorPagina")
+            contenedorPagina.style.display = "grid"
+            const paquetes = document.querySelectorAll(".ficha#Paquete");
+            paquetes.forEach(paquete => {
+                paquete.style.display = "none";
+            });
+
+            const empresas = document.querySelectorAll(".ficha#Empresa");
+            empresas.forEach(empresa => {
+                empresa.style.display = "none";
+            });
+
+            const servicios = document.querySelectorAll(".ficha#Servicio");
+            servicios.forEach(servicio => {
+                servicio.style.display = "block";
+                
+            });
+        }
+
+        function mostrarFichasPaquetes() {
+            const contenedorPagina = document.getElementById("contenedorPagina")
+            contenedorPagina.style.display = "grid"
+            const servicios = document.querySelectorAll(".ficha#Servicio");
+            servicios.forEach(servicio => {
+                servicio.style.display = "none";
+            });
+
+            const empresas = document.querySelectorAll(".ficha#Empresa");
+            empresas.forEach(empresa => {
+                empresa.style.display = "none";
+            });
+
+            const paquetes = document.querySelectorAll(".ficha#Paquete");
+            paquetes.forEach(paquete => {
+                paquete.style.display = "block";
+            });
+        }
+
+    </script>
+</body>
+
+</html>

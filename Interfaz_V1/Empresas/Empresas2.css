@@ -1,0 +1,150 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    background-color: #227050;
+}
+
+h2 {
+    background-color: #2F3033; 
+    color: white; 
+    padding: 8px;
+    text-align: center;
+}
+
+#empresa-options {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#empresa-options h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#empresa-options ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#empresa-options li {
+    margin: 15px;
+    display: inline-block;
+}
+
+#empresa-options button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#empresa-options button:hover {
+    background-color: #004c99;
+    transform: scale(1.1);
+}
+
+.company-services {
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    padding: 50px;
+    background-color: #E6D39E;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease;
+}
+
+.company-services h3 {
+    margin-top: 20px;
+    color: #0066cc;
+}
+
+
+.company-services .service {
+    display: block;
+    width: 100%;
+    margin: 15px 0; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.company-services .service img {
+    width: 60%;
+    height: auto; 
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+.company-services .service:hover img {
+    transform: scale(1.05); 
+}
+
+.company-services .service .caption {
+    padding: 20px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.company-services .service h1 {
+    color: #0066cc;
+    font-size: 1.5rem;
+}
+
+.company-services .service p {
+    color: #555;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    .company-services {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .company-services .service {
+        width: 100%;
+    }
+
+    #empresa-options button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
