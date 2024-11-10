@@ -4,74 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nombre de la Empresa</title>
-    <link rel="stylesheet" href="Empresas.css">
+    <link rel="stylesheet" href="Empresas2.css">
 </head>
 <body>
-    <h1>Los tilines adventure</h1>
+    <h1>Bienvenidos al Mundo de los Tours</h1>
 
-    <div class="info-container">
-        <p>Bienvenidos a nuestra empresa. Nos dedicamos a ofrecer los mejores servicios en el sector turístico. Nuestra misión es generar sonrisas y gozo para las personas que deseen ir en nuestros diferentes tours.</p>
+    <div id="empresa-options">
+        <h2>Selecciona una empresa para ver los servicios</h2>
+        <ul>
+            <li><button onclick="showCompany('tilines')">Los Tilines Adventure</button></li>
+            <li><button onclick="showCompany('empresa2')">Empresa 2</button></li>
+            <li><button onclick="showCompany('empresa3')">Empresa 3</button></li>
+        </ul>
     </div>
 
+    <div id="tilines" class="company-services" style="display: none;">
+        <h2>Los Tilines Adventure</h2>
+        <p>Bienvenidos a nuestra empresa. Nos dedicamos a ofrecer los mejores servicios en el sector turístico. Nuestra misión es generar sonrisas y gozo para las personas que deseen ir en nuestros diferentes tours.</p>
 
-    <h2>Servicios que ofrece la empresa</h2>
-    <div class="slider-container">
-        <div class="slider">
-            <div class="slides">
-                <div class="service">
-                    <img src="../Imagenes/VolcanArenal.jpg" alt="Volcán Arenal">
-                    <div class="caption">
-                        <h1>Volcán Arenal</h1>
-                        <p>Ubicación: Costa Rica</p>
-                        <p>Precio: $50</p>
-                        <button>Acceder al servicio</button>
-                    </div>
-                </div>
-            </div>
-            <div class="slides">
-                <div class="service">
-                    <img src="../Imagenes/MarinoBallena.jfif" alt="Marino Ballena">
-                    <div class="caption">
-                        <h1>Marino Ballena</h1>
-                        <p>Ubicación: Costa Rica</p>
-                        <p>Precio: $40</p>
-                        <button>Acceder al servicio</button>
-                    </div>
-                </div>
-            </div>
-            <div class="slides">
-                <div class="service">
-                    <img src="../Imagenes/RioCeleste.jpg" alt="Río Celeste">
-                    <div class="caption">
-                        <h1>Río Celeste</h1>
-                        <p>Ubicación: Costa Rica</p>
-                        <p>Precio: $60</p>
-                        <button>Acceder al servicio</button>
-                    </div>
-                </div>
+        <h3>Servicios que ofrecemos:</h3>
+        
+        <div class="service">
+            <img src="../Imagenes/VolcanArenal.jpg" alt="Volcán Arenal">
+            <div class="caption">
+                <h1>Volcán Arenal</h1>
+                <p>Ubicación: Costa Rica</p>
+                <p>Precio: $50</p>
+                <button>Acceder al servicio</button>
             </div>
         </div>
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-    
+        
+        <div class="service">
+            <img src="../Imagenes/MarinoBallena.jfif" alt="Marino Ballena">
+            <div class="caption">
+                <h1>Marino Ballena</h1>
+                <p>Ubicación: Costa Rica</p>
+                <p>Precio: $40</p>
+                <button>Acceder al servicio</button>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="../Imagenes/RioCeleste.jpg" alt="Río Celeste">
+            <div class="caption">
+                <h1>Río Celeste</h1>
+                <p>Ubicación: Costa Rica</p>
+                <p>Precio: $60</p>
+                <button>Acceder al servicio</button>
+            </div>
+        </div>
 
-    <h2>Paquetes de la empresa/h2>
+    </div>
+
+    <div id="empresa2" class="company-services" style="display: none;">
+        <h2>Empresa 2</h2>
+        <p>Descripción de Empresa 2...</p>
+    </div>
+
+    <div id="empresa3" class="company-services" style="display: none;">
+        <h2>Empresa 3</h2>
+        <p>Descripción de Empresa 3...</p>
+    </div>
 
     <script>
-        let currentIndex = 0;
+        function showCompany(company) {
+            const companies = document.querySelectorAll('.company-services');
+            companies.forEach(company => {
+                company.style.display = 'none';
+            });
 
-        function moveSlide(step) {
-            const slides = document.querySelectorAll(".slides");
-            const totalSlides = slides.length;
-            currentIndex = (currentIndex + step + totalSlides) % totalSlides; 
-            updateSlider();
-        }
-
-        function updateSlider() {
-            const slides = document.querySelectorAll(".slides");
-            const slider = document.querySelector(".slider");
-            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            const selectedCompany = document.getElementById(company);
+            selectedCompany.style.display = 'block';
         }
     </script>
 </body>
