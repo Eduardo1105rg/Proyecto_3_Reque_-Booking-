@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre de la Empresa</title>
+    <link rel="stylesheet" href="Empresas.css">
+</head>
+<body>
+    <h1>Los tilines adventure</h1>
+
+    <div class="info-container">
+        <p>Bienvenidos a nuestra empresa. Nos dedicamos a ofrecer los mejores servicios en el sector turístico. Nuestra misión es generar sonrisas y gozo para las personas que deseen ir en nuestros diferentes tours.</p>
+    </div>
+
+    <div class="buttons">
+        <button>Registrar</button>
+        <button>Modificar</button>
+    </div>
+
+    <h2>Mis Servicios</h2>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <div class="service">
+                    <img src="VolcanArenal.jpg" alt="Volcán Arenal">
+                    <div class="caption">
+                        <h1>Volcán Arenal</h1>
+                        <p>Ubicación: Costa Rica</p>
+                        <p>Precio: $50</p>
+                        <button>Acceder al servicio</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slides">
+                <div class="service">
+                    <img src="MarinoBallena.jfif" alt="Marino Ballena">
+                    <div class="caption">
+                        <h1>Marino Ballena</h1>
+                        <p>Ubicación: Costa Rica</p>
+                        <p>Precio: $40</p>
+                        <button>Acceder al servicio</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slides">
+                <div class="service">
+                    <img src="RioCeleste.jpg" alt="Río Celeste">
+                    <div class="caption">
+                        <h1>Río Celeste</h1>
+                        <p>Ubicación: Costa Rica</p>
+                        <p>Precio: $60</p>
+                        <button>Acceder al servicio</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    
+
+    <h2>Mis Paquetes</h2>
+    <p>Consulta nuestros paquetes personalizados para satisfacer tus necesidades: [detalles de los paquetes].</p>
+
+    <script>
+        let currentIndex = 0;
+
+        function moveSlide(step) {
+            const slides = document.querySelectorAll(".slides");
+            const totalSlides = slides.length;
+            currentIndex = (currentIndex + step + totalSlides) % totalSlides; 
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const slides = document.querySelectorAll(".slides");
+            const slider = document.querySelector(".slider");
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
+</body>
+</html>

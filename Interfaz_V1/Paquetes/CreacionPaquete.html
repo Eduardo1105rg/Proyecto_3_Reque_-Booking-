@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Servicio</title>
+    <link rel="stylesheet" href="crearPaquete.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Crear Nuevo Paquete</h1>
+    </header>
+    <main>
+        <form id="create-service-form">
+            <label for="activity-type">Actividades del paquete:</label>
+            <div id="activity-type">
+                <label>
+                    <input type="checkbox" name="activity-type" value="hospedaje">
+                    Hospedaje
+                </label>
+                <label>
+                    <input type="checkbox" name="activity-type" value="tours">
+                    Tours
+                </label>
+                <label>
+                    <input type="checkbox" name="activity-type" value="alimentacion">
+                    Alimentación
+                </label>
+                <label>
+                    <input type="checkbox" name="activity-type" value="transporte">
+                    Transporte
+                </label>
+            </div>
+            
+            <label for="service-name">Nombre del Paquete:</label>
+            <input type="text" id="service-name" name="service-name" required>
+            
+            <label for="location">Ubicación:</label>
+            <input type="text" id="location" name="location" required>
+            
+            <label for="contact-info">Información de Contacto:</label>
+            <input type="text" id="contact-info" name="contact-info" required>
+            
+            <label for="price">Descuento(Este se le descuenta al precio de todos los servicios):</label>
+            <input type="number" id="price" name="price" required>
+            
+            <label for="availability">Disponibilidad:</label>
+            <input type="text" id="availability" name="availability" required>
+            
+            <label for="description">Descripción del paquete:</label>
+            <textarea id="description" name="description" required max =></textarea>
+
+            <label for="service">Servicios a agregar:</label>
+            <button type="button" class="submit" data-bs-toggle="modal" data-bs-target="#modalservice">Agregar</button>
+            <br>
+            
+            <div class="modal fade" id="modalservice" tabindex="-1" aria-labelledby="modalservice" aria-hidden="true">
+                <div class="modal-dialog modal-custom">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="registerModalLabel">Registrar servicios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="registerForm">
+                                <label for="activity-type-modal">Servicios del paquete:</label>
+                                <div id="activity-type-modal" class="d-flex flex-wrap gap-3">
+                                    <label class="d-flex flex-column align-items-center">
+                                        <div class="image-container">
+                                            <img src="PuertoViejo.jpg" alt="Puerto" class="img-fluid">
+                                            <div class="caption">
+                                                <h1>Puerto viejo</h1>
+                                                <p>Ubicación: Costa Rica, Limón</p>
+                                                <p>Precio: $70</p>
+                                                <button>Acceder al servicio</button>
+                                            </div>
+                                        </div>
+                                        <input type="checkbox" name="activity-type" value="puerto-viejo" class="activity-checkbox">
+                                    </label>
+                                    <label class="d-flex flex-column align-items-center">
+                                        <div class="image-container">
+                                            <img src="Pacuare.jpg" alt="Pacuare" class="img-fluid">
+                                            <div class="caption">
+                                                <h1>Río pacuare</h1>
+                                                <p>Ubicación: Costa Rica, Siquirres</p>
+                                                <p>Precio: $90</p>
+                                                <button>Acceder al servicio</button>
+                                            </div>
+                                        </div>
+                                        <input type="checkbox" name="activity-type" value="marino-ballena" class="activity-checkbox">
+                                    </label>
+                                    <label class="d-flex flex-column align-items-center">
+                                        <div class="image-container">
+                                            <img src="SelvaTropical.jpg" alt="Selva" class="img-fluid">
+                                            <div class="caption">
+                                                <h1>Selva tropical</h1>
+                                                <p>Ubicación: Costa Rica, Limón</p>
+                                                <p>Precio: $180</p>
+                                                <button>Acceder al servicio</button>
+                                            </div>
+                                        </div>
+                                        <input type="checkbox" name="activity-type" value="isla-tortuga" class="activity-checkbox">
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-3">Registrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-buttons mt-3">
+                <button type="button" class="btn btn-secondary cancel">Cancelar</button>
+            </div>
+        </form>
+    </main>
+
+    <script>  
+    document.addEventListener("DOMContentLoaded", function() {
+        const agregarButton = document.querySelector(".submit[data-bs-toggle='modal']");
+        const modalService = new bootstrap.Modal(document.getElementById('modalservice'));
+
+        agregarButton.addEventListener("click", function() {
+            modalService.show();
+        });
+    });
+    </script>
+
+<script> 
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("create-service-form"); 
+    const checkboxes = document.querySelectorAll(".activity-checkbox"); 
+
+    form.addEventListener("submit", function(event) {
+        const checkedCount = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
+
+        if (checkedCount < 2) {
+            event.preventDefault(); 
+            alert("Por favor, seleccione al menos 2 actividades del paquete.");
+        }
+    });
+});
+</script>
+
+    <script src="crear_servicio.js"></script>
+</body>
+</html>
