@@ -6,20 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Catalogo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <div class="divEncabezado">
-        <button class="abrirSidebar" onclick=openSidebar()>Abrir Sidebar</button>
+        <button class="abrirSidebar" onclick=openSidebar()>Abrir Barra de Herramientas</button>
         <div id="sidebar" class="sidebar">
             <div class="contenidoSidebar">
                 <h2>Barra de Herramientas</h2>
-                <button onclick=mostrarFichasServicios() class="btn"><i class="fa fa-home"></i> Servicios</button>
-                <button onclick=mostrarFichasPaquetes() class="btn"><i class="fa fa-bars"></i> Paquetes</button>
-                <button onclick=mostrarFichasEmpresas() class="btn"><i class="fa fa-bars"></i> Empresas</button>
-                <button onclick=mostrarTodos() class="btn"><i class="fa fa-bars"></i> Todos</button>
-                <button onclick=mostrarFiltros() id="filtro" class="btn"><i class="fa fa-bars"></i> Activar Filtros</button>
+                <button class="btn"></i> Comprar Servicio</button>
+                <button class="btn"></i> Reservar Servicio</button>
+                <button class="btn"></i> Agregar Servicio a Lista de Deseos</button>
             </div>
         </div>
         <div class="contenedorEncabezado">
@@ -28,10 +25,10 @@
                 <input id="buscar" placeholder="Buscar" class="input" name="text" type="text">
                 <i onclick="buscar()" class="fa fa-search iconoLupa"></i>
             </div>
-            <button onclick=mostrarFichasServicios() class="btn"><i class="fa fa-home"></i> Servicios</button>
-            <button onclick=mostrarFichasPaquetes() class="btn"><i class="fa fa-bars"></i> Paquetes</button>
-            <button onclick=mostrarFichasEmpresas() class="btn"><i class="fa fa-bars"></i> Empresas</button>
-            <button onclick=mostrarTodos() class="btn"><i class="fa fa-bars"></i> Todos</button>
+            <button onclick=mostrarFichasServicios() class="btn"></i> Servicios</button>
+            <button onclick=mostrarFichasPaquetes() class="btn"></i> Paquetes</button>
+            <button onclick=mostrarFichasEmpresas() class="btn"></i> Empresas</button>
+            <button onclick=mostrarTodos() class="btn"> Todos</button>
             <button onclick=mostrarFiltros() id="filtros" class="btn">Activar Filtros</button>
             <div class="drop">
                 <button onclick=dropFiltros() id="botonDrop" class="botonDrop">Filtros</button>
