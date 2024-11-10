@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-    background-image: url(fondo2.avif);
+    background-image: url(Imagenes/fondo2.avif);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
