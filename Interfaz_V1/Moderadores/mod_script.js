@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeButton = document.querySelector('.close-button');
     const searchBar = document.getElementById('search-bar');
     const requests = document.querySelectorAll('.request');
+    const redireccionBTN = document.getElementById("redireccion");
 
     detailsButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -45,4 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    redireccionBTN.addEventListener("click", function() {
+        window.location.href = "../Moderadores_Rvision_Solicitudes/mod_solicitudes.html";
+    });
+
 });
