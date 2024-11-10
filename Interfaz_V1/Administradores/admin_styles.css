@@ -1,21 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f2f0e4;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #4a7c59;
     color: white;
     text-align: center;
     padding: 1em 0;
+    font-size: 1.5em;
 }
 
 .admin-panel {
     width: 80%;
     margin: 2em auto;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -23,45 +24,47 @@ header {
 .nav-tabs {
     display: flex;
     justify-content: space-around;
-    background-color: #4CAF50;
+    background-color: #4a7c59;
     border-radius: 8px 8px 0 0;
 }
 
 .tab-btn {
     flex-grow: 1;
     padding: 1em;
+    color: white;
     background: none;
     border: none;
-    color: white;
+    font-size: 1.1em;
     cursor: pointer;
-    text-align: center;
 }
 
-.tab-btn:hover {
-    background-color: #45a049;
+.tab-btn:hover, .tab-btn.active {
+    background-color: #6b9362;
 }
 
 .tab-content {
-    padding: 1em;
+    padding: 1.5em;
     display: none;
+    background-color: #faf8f0;
+    border-radius: 0 0 8px 8px;
 }
 
 .tab-content.visible {
     display: block;
 }
 
-.hidden {
-    display: none;
-}
-
 .report, .request {
-    background-color: #f1f1f1;
-    border: 1px solid #ddd;
+    background-color: #e8e4da;
+    border: 1px solid #ccc;
     border-radius: 8px;
     margin: 1em 0;
     padding: 1em;
+    font-size: 1em;
 }
 
+.hidden {
+    display: none;
+}
 button {
     margin: 0.5em;
     padding: 0.5em 1em;
@@ -71,12 +74,11 @@ button {
 }
 
 .view-report, .view-request {
-    background-color: #4CAF50;
+    background-color: #4a7c59;
     color: white;
 }
 
 .modal {
-    /*display: none;*/
     position: fixed;
     z-index: 1;
     left: 0;
@@ -88,10 +90,10 @@ button {
 }
 
 .modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 1.5em;
+    border: 1px solid #ccc;
     width: 80%;
     max-width: 500px;
     border-radius: 8px;
@@ -99,54 +101,40 @@ button {
 }
 
 .close-button {
-    color: #aaa;
+    color: #888;
     float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
 }
 
-.close-button:hover,
-.close-button:focus {
+.close-button:hover, .close-button:focus {
     color: black;
 }
 
 .approve {
-    background-color: #4CAF50;
+    background-color: #4a7c59;
     color: white;
 }
 
 .reject {
-    background-color: #f44336;
+    background-color: #d9534f;
     color: white;
 }
 
 .cancel {
-    background-color: #ddd;
+    background-color: #cccccc;
     color: black;
 }
 
 .recPermisos {
-    background-color: #f0ecec;
-    font-style: italic;
-}
-
-
-/* Parte de los permisos*/
-
-.recPermisos {
-    /*background: #ffffff;*/
+    background-color: #edf4ec;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 80%;
+    margin: 2em auto;
     text-align: center;
-    margin-bottom: 20px;
-    background-color: #f0f0f0;  
-    justify-content: center; 
-    align-items: center; 
-    margin: 2%;
-    
 }
 
 .section {
@@ -154,6 +142,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 1em;
 }
 
 .switch {
@@ -176,7 +165,7 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #bcbcbc;
     transition: .4s;
     border-radius: 24px;
 }
@@ -194,17 +183,9 @@ button {
 }
 
 input:checked + .slider {
-    background-color: #4CAF50;
+    background-color: #4a7c59;
 }
 
 input:checked + .slider:before {
     transform: translateX(26px);
-}
-
-.slider.round {
-    border-radius: 24px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
 }
