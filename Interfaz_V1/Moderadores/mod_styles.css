@@ -1,20 +1,23 @@
 /* General Styles */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    background-color: #f3f4f6;
+    font-family: 'Times New Roman', Arial, sans-serif;
+    /*background-color: #f3f4f6;*/
+    background-color: #ddd6cc;
     margin: 0;
     padding: 0;
 }
 
 /* Header Styles */
 header {
-    background-color: #204f22;
+    /*background-color: #204f22;*/
+    background-color: #586232;
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 0.2em 0;
     font-size: 1.5em;
     font-weight: bold;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
 }
 
 /* Moderation Panel */
