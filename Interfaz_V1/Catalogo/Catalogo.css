@@ -47,7 +47,7 @@ h2 {
 
 
 .contenidoSidebar {
-    padding: 20px;
+    padding: 1vh;
     color: white;
 }
 
@@ -226,12 +226,36 @@ h2 {
 
 
 .divFormulario {
-    height: 30vh;
-    background-color: brown;
-    margin: 0;
+    background-color: #b08255;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.divFormulario h1 {
+    font-size: 5vh;
+    margin: 0;
+    font-weight: bold;
+}
+
+.divFormulario h2 {
+    font-size: 4vh;
+    margin: 10px 0 0;
+}
+
+.divFormulario:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+.divFormulario:active {
+    transform: translateY(0); /* Reacción de presión */
+}
+
 
 #formulario {
     display: none;
