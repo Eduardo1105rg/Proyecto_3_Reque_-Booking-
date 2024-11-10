@@ -17,6 +17,41 @@ h2 {
     font-size: 3vh;
     margin: 0;
 }
+
+.abrirSidebar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    border: none;
+    color: rgb(113, 113, 113);
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+}
+
+
+.contenidoSidebar {
+    padding: 20px;
+    color: white;
+}
+
+
 .divEncabezado {
     height: 25vh;
     background-image: url(Imagenes/encabezado1.jpg);
@@ -82,7 +117,10 @@ h2 {
     margin: 1vh;
     border-radius: 16px;
 }
-
+.drop {
+    position: relative;
+    display: inline-block;
+}
 .botonDrop {
     display: none;
     background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
@@ -95,16 +133,13 @@ h2 {
     border-radius: 16px;
 }
 
-.drop {
-    position: relative; /* Necesario para posicionar elementos dentro de este contenedor */
-    display: inline-block;
-}
+
 
 .opciones {
-    display: none; /* Inicialmente ocultas */
-    position: absolute; /* Posicionamiento absoluto para ubicarlas a la derecha */
-    left: 100%; /* 100% del ancho del botón para colocar a la derecha */
-    top: 0; /* Alineado con el botón */
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
     background-color: #f1f1f1;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -113,11 +148,16 @@ h2 {
     min-width: 200px;
 }
 
-.opciones a {
+.opciones select {
     color: black;
+    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    border: none;
+    color: rgb(113, 113, 113);
     padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 1vh;
+    border-radius: 16px;
 }
 
 .checkboxes-opciones {
@@ -127,9 +167,17 @@ h2 {
 
 .checkboxes-opciones label {
     display: block;
-    margin: 5px 0;
-    background-color: #000;
+    color: black;
+    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    border: none;
+    color: rgb(113, 113, 113);
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 16px;
 }
+
 
 .divPagina {
     display: grid;
@@ -176,9 +224,6 @@ h2 {
     font-size: 18px;
 }
 
-.ficha button:hover {
-    opacity: 70%;
-}
 
 .divFormulario {
     height: 30vh;

@@ -11,6 +11,17 @@
 
 <body>
     <div class="divEncabezado">
+        <button class="abrirSidebar" onclick=openSidebar()>Abrir Sidebar</button>
+        <div id="sidebar" class="sidebar">
+            <div class="contenidoSidebar">
+                <h2>Barra de Herramientas</h2>
+                <button onclick=mostrarFichasServicios() class="btn"><i class="fa fa-home"></i> Servicios</button>
+                <button onclick=mostrarFichasPaquetes() class="btn"><i class="fa fa-bars"></i> Paquetes</button>
+                <button onclick=mostrarFichasEmpresas() class="btn"><i class="fa fa-bars"></i> Empresas</button>
+                <button onclick=mostrarTodos() class="btn"><i class="fa fa-bars"></i> Todos</button>
+                <button onclick=mostrarFiltros() id="filtro" class="btn"><i class="fa fa-bars"></i> Activar Filtros</button>
+            </div>
+        </div>
         <div class="contenedorEncabezado">
             <h1>Catalogo de Servicios</h1>
             <div class="espacioInput">
@@ -21,9 +32,9 @@
             <button onclick=mostrarFichasPaquetes() class="btn"><i class="fa fa-bars"></i> Paquetes</button>
             <button onclick=mostrarFichasEmpresas() class="btn"><i class="fa fa-bars"></i> Empresas</button>
             <button onclick=mostrarTodos() class="btn"><i class="fa fa-bars"></i> Todos</button>
-            <button onclick=mostrarFiltros() id="filtros" class="btn"><i class="fa fa-bars"></i> Activar Filtros</button>
+            <button onclick=mostrarFiltros() id="filtros" class="btn">Activar Filtros</button>
             <div class="drop">
-                <button onclick=dropFiltros() class="botonDrop">Filtros</button>
+                <button onclick=dropFiltros() id="botonDrop" class="botonDrop">Filtros</button>
                 <div id="opcionesFiltros" class="opciones">
                     <select id="filtrosCombo" onchange=mostrar(value)>
                         <option value="">Selecciona una opción</option>
@@ -43,7 +54,7 @@
                     <div id="opcionesServicios" class="checkboxes-opciones" style="display: none;">
                         <label><input type="checkbox" name="ubicacion" value="Hoteles"> Hoteles</label><br>
                         <label><input type="checkbox" name="ubicacion" value="Tours"> Tours</label><br>
-                        <label><input type="checkbox" name="ubicacion" value="Restaurantes"> Restaurantes</label><br>
+                        <label><input type="checkbox" name="ubicacion" value=""> Restaurantes</label><br>
                         <label><input type="checkbox" name="ubicacion" value="Otros"> Otros</label><br>
                     </div>
                     <div id="opcionesPaquetes" class="checkboxes-opciones" style="display: none;">
@@ -64,70 +75,88 @@
                 <h1>Prueba</h1>
                 <p id="Ubicacion">Limon</p>
                 <p id="Precio">50 peso</p>
+                <p id="Tipo">Paquete</p>
+                <p id="TipoServicio">Hotel</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Empresa">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Limon</p>
+                <p id="Precio">50 peso</p>
+                <p id="Tipo">Individual</p>
+                <p id="TipoServicio">Tour</p>
                 <p><button>Acceder al servicio</button></p>
             </div>
 
             <div class="ficha" id="Servicio">
                 <img src=Imagenes\encabezado.jpg style="width:100%">
                 <h1>Prueba</h1>
-                <p id="Ubicacion">Limon</p>
+                <p id="Ubicacion">Puntarenas</p>
                 <p id="Precio">50 peso</p>
+                <p id="Tipo">Individual</p>
+                <p id="TipoServicio">Restaurante</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Paquete">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Puntarenas</p>
+                <p id="Precio">50 peso</p>
+                <p id="Tipo">Individual</p>
+                <p id="TipoServicio">Restaurante</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Empresa">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Puntarenas</p>
+                <p id="Precio">50 peso</p>
+                <p id="Tipo">Individual</p>
+                <p id="TipoServicio">Restaurante</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Paquete">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Puntarenas</p>
+                <p id="Precio">50 peso</p>
+                <p id="Tipo">Individual</p>
+                <p id="TipoServicio">Restaurante</p>
+                <p><button>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Empresa">
+                <img src=Imagenes\encabezado.jpg style="width:100%">
+                <h1>Prueba</h1>
+                <p id="Ubicacion">Puntarenas</p>
+                <p id="Precio">50 peso</p>
+                <p id="Tipo">Individual</p>
+                <p id="TipoServicio">Restaurante</p>
                 <p><button>Acceder al servicio</button></p>
             </div>
 
             <div class="ficha" id="Servicio">
                 <img src=Imagenes\encabezado.jpg style="width:100%">
                 <h1>Prueba</h1>
-                <p id="Ubicacion">Limon</p>
+                <p id="Ubicacion">Puntarenas</p>
                 <p id="Precio">50 peso</p>
-                <p><button>Acceder al servicio</button></p>
-            </div>
-
-            <div class="ficha" id="Paquete">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
-                <p id="Ubicacion">Limon</p>
-                <p id="Precio">50 peso</p>
-                <p><button>Acceder al servicio</button></p>
-            </div>
-
-            <div class="ficha" id="Paquete">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
-                <p id="Ubicacion">Limon</p>
-                <p id="Precio">50 peso</p>
-                <p><button>Acceder al servicio</button></p>
-            </div>
-
-            <div class="ficha" id="Paquete">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
-                <p id="Ubicacion">Limon</p>
-                <p id="Precio">50 peso</p>
-                <p><button>Acceder al servicio</button></p>
-            </div>
-
-            <div class="ficha" id="Paquete">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
-                <p id="Ubicacion">Limon</p>
-                <p id="Precio">50 peso</p>
+                <p id="Tipo">Individual</p>
+                <p id="TipoServicio">Restaurante</p>
                 <p><button>Acceder al servicio</button></p>
             </div>
 
             <div class="ficha" id="Servicio">
                 <img src=Imagenes\encabezado.jpg style="width:100%">
                 <h1>Prueba</h1>
-                <p id="Ubicacion">Limon</p>
+                <p id="Ubicacion">Puntarenas</p>
                 <p id="Precio">50 peso</p>
-                <p><button>Acceder al servicio</button></p>
-            </div>
-
-            <div class="ficha" id="Servicio">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
-                <p id="Ubicacion">Limon</p>
-                <p id="Precio">50 peso</p>
+                <p id="Tipo">Individual</p>
+                <p id="TipoServicio">Restaurante</p>
                 <p><button>Acceder al servicio</button></p>
             </div>
         </div>
@@ -218,8 +247,8 @@
             if (botonFiltro.innerText === "Desactivar Filtros") {
                 flag = 1;
             }
-            const textoBusqueda = document.getElementById("buscar").value.toLowerCase();
 
+            const textoBusqueda = document.getElementById("buscar").value.toLowerCase();
             const ubicacionesSeleccionadas = Array.from(document.querySelectorAll('#opcionesUbicaciones input[type="checkbox"]:checked')).map(cb => cb.value);
             const serviciosSeleccionados = Array.from(document.querySelectorAll('#opcionesServicios input[type="checkbox"]:checked')).map(cb => cb.value);
             const paquetesSeleccionados = Array.from(document.querySelectorAll('#opcionesPaquetes input[type="checkbox"]:checked')).map(cb => cb.value);
@@ -229,21 +258,21 @@
             fichas.forEach(ficha => {
                 const titulo = ficha.querySelector("h1").textContent.toLowerCase();
                 const ubicacion = ficha.querySelector("#Ubicacion").textContent.trim();
-                const tipo = ficha.id;
+                const tipo = ficha.querySelector("#Tipo").textContent.trim();
+                const tipoServicio = ficha.querySelector("#TipoServicio").textContent.trim();
 
                 const coincideBusqueda = titulo.includes(textoBusqueda);
-
                 const coincideUbicacion = ubicacionesSeleccionadas.length === 0 || ubicacionesSeleccionadas.includes(ubicacion);
-                const coincideServicio = serviciosSeleccionados.length === 0 || (tipo === "Servicio" && serviciosSeleccionados.includes(titulo));
-                const coincidePaquete = paquetesSeleccionados.length === 0 || (tipo === "Paquete" && paquetesSeleccionados.includes(titulo));
+                const coincideTipoServicio = serviciosSeleccionados.length === 0 || serviciosSeleccionados.includes(tipoServicio);
+                const coincideTipo = paquetesSeleccionados.length === 0 || paquetesSeleccionados.includes(tipo);
+
                 if (flag === 1) {
-                    if (coincideBusqueda && coincideUbicacion && (coincideServicio || coincidePaquete)) {
+                    if (coincideBusqueda && coincideUbicacion && (coincideTipoServicio || coincideTipo)) {
                         ficha.style.display = "block";
                     } else {
                         ficha.style.display = "none";
                     }
-                }
-                else {
+                } else {
                     if (coincideBusqueda) {
                         ficha.style.display = "block";
                     } else {
@@ -252,6 +281,7 @@
                 }
             });
         }
+
 
 
         function mostrarFormulario() {
@@ -265,19 +295,19 @@
         }
 
         function mostrarFiltros() {
-            var botones = document.getElementsByClassName("botonDrop");
+            var boton = document.getElementById("botonDrop");
             var botonFiltro = document.getElementById("filtros");
 
-            for (let i = 0; i < botones.length; i++) {
-                if (botones[i].style.display === "none") {
-                    botonFiltro.textContent = "Desactivar Filtros";
-                    botones[i].style.display = "block";
-                } else {
-                    botonFiltro.textContent = "Activar Filtros";
-                    botones[i].style.display = "none";
-                }
+            if (boton.style.display === "none" || boton.style.display === "") {
+                botonFiltro.innerText = "Desactivar Filtros";
+                boton.style.display = "block";
+            } else {
+                botonFiltro.innerText = "Activar Filtros";
+                boton.style.display = "none";
             }
         }
+
+
 
         function dropFiltros() {
             var opciones = document.getElementById("opcionesFiltros");
@@ -287,13 +317,22 @@
                 opciones.style.display = "block";
             }
         }
+        //Tengo que ver esto
+        window.onclick = function (event) {
+            const opciones = document.getElementById("opcionesFiltros");
+            const botonDrop = document.querySelector(".botonDrop");
+            if (!opciones.contains(event.target) && event.target !== botonDrop) {
+                opciones.style.display = "none";
+            }
+        };
+
 
         window.onclick = function (event) {
-            if (!event.target.matches('.botonDrop') && !event.target.closest('#opcionesFiltros')) {
-                var opciones = document.getElementById("opcionesFiltros");
-                if (opciones.style.display === "block") {
-                    opciones.style.display = "none";
-                }
+            const sidebar = document.getElementById("sidebar");
+            const openButton = document.querySelector(".abrirSidebar");
+
+            if (!sidebar.contains(event.target) && event.target !== openButton) {
+                closeSidebar();
             }
         }
 
@@ -369,6 +408,13 @@
             }
         }
 
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+        }
 
     </script>
 </body>
