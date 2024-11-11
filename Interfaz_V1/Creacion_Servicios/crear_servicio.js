@@ -9,27 +9,63 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const images = imagesInput.files;
         if (images.length < 5) {
-            alert('Debe agregar al menos 5 imágenes.');
+            Swal.fire({
+                title: 'Error',
+                text: 'Debe agregar al menos 5 imágenes.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
             return;
         }
 
         if (!activityType.value) {
-            alert('Por favor, seleccione un tipo de actividad.');
+            Swal.fire({
+                title: 'Error',
+                text: 'Por favor, seleccione un tipo de actividad.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
             return;
         }
 
         if (!paymentAccount.value) {
-            alert('Por favor, ingrese una cuenta de pago válida.');
+            Swal.fire({
+                title: 'Error',
+                text: 'Por favor, ingrese una cuenta de pago válida.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
             return;
         }
 
-        alert('Servicio enviado para revisión.');
+        Swal.fire({
+            title: 'Enviado',
+            text: 'Servicio enviado para revisión.',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
         form.reset();
+        window.location.href = "../Empresas/PerfilSoloEmpresa.html";
     });
 
     document.querySelector('.cancel').addEventListener('click', function() {
-        if (confirm('¿Está seguro de que desea cancelar?')) {
-            form.reset();
-        }
+        Swal.fire({
+            title: '¿Está seguro de que desea cancelar?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Sí',
+            cancelButtonText: 'No'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                form.reset();
+                window.location.href = "../Empresas/PerfilSoloEmpresa.html";
+            }
+        });
     });
+
+
+
+
+    
 });
+

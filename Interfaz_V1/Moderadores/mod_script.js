@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     redireccionBTN.addEventListener("click", function() {
         window.location.href = "../Moderadores_Rvision_Solicitudes/mod_solicitudes.html";
+
     });
 
 });

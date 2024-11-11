@@ -14,8 +14,10 @@
     </div>
 
     <div class="buttons">
-        <button id="registroPaqueteBtn" onclick="irARegistrarPaquete()">Registrar</button>
-        <button id="modificarPaqueteBtn" onclick="irAModificarPaquete()">Modificar</button>
+        <button id="registroPaqueteBtn" onclick="irARegistrarServicio()">Registrar servicio</button>
+        <button id="modificarPaqueteBtn" onclick="irAModificarServicio()">Modificar servicio</button>
+        <button id="registroPaqueteBtn" onclick="irARegistrarPaquete()">Registrar paquete</button>
+        <button id="modificarPaqueteBtn" onclick="irAModificarPaquete()">Modificar paquete</button>
     </div>
 
     <h2>Mis Servicios</h2>
@@ -80,13 +82,25 @@
     </script>
 
     <script>
-function irARegistrarPaquete() {
-    window.location.href = "../Paquetes/CreacionPaquete.html"; 
-}
-    
-function irAModificarPaquete() {
-    window.location.href = "../Paquetes/EdicionPaquete.html"; 
-}
+        function irARegistrarPaquete() {
+            window.location.href = "../Paquetes/CreacionPaquete.html"; 
+        }
+            
+        function irAModificarPaquete() {
+            window.location.href = "../Paquetes/EdicionPaquete.html"; 
+        }
+
+        function irARegistrarServicio() {
+            window.location.href = "../Creacion_Servicios/crear_servicio.html"; 
+        }
+            
+        function irAModificarServicio() {
+            window.location.href = "../Paquetes/EdicionPaquete.html"; 
+        }
+
+
+
+
     </script>
 </body>
 </html>
