@@ -192,6 +192,7 @@ h2 {
     background-color: #4f6d4f;
     color: white;
     padding: 20px;
+    padding: 0.1em ;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
