@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Servicio</title>
     <link rel="stylesheet" href="servicio_1_styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -44,10 +47,10 @@
                     <!--<p>Descuentos: <span>10% de descuento</span></p>-->
                 </div>
                 <div class="tools">
-                    <button class="buy">Pagar</button>
-                    <button class="reserve">Reservar</button>
-                    <button class="add-to-wishlist">Agregar a lista de deseados</button>
-                    <button class="add-to-package">Agregar a paquete</button>
+                    <button id = "comprarBTN" class="buy">Pagar</button>
+                    <button id = "reservarBTN" class="reserve">Reservar</button>
+                    <button id = "listaDeseosBTN" class="add-to-wishlist">Agregar a lista de deseados</button>
+                    <!--<button id = "" class="add-to-package">Agregar a paquete</button>-->
                 </div>
             </article>
 
@@ -83,7 +86,7 @@
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
             <nav class="navegacion">
-                <a href="nosotros.html">Soporte</a>
+                <!--<a href="nosotros.html">Soporte</a>-->
                 <a href="../PagPrincipal.html">Pagina principal</a>
                 <!--<a href="blog.html"></a>-->
                 <!--<a href="contacto.html">Contacto</a>-->
@@ -95,3 +98,4 @@
     <script src="servicio_1_script.js"></script>
 </body>
 </html>
+

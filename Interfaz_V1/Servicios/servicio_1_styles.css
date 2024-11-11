@@ -13,7 +13,7 @@ header {
     background-color: #476F4D;
     color: #FFF;
     text-align: center;
-    padding: 1.5em 0;
+    padding: 0.01em 0;
     font-size: 1.8em;
     font-weight: bold;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -149,4 +149,9 @@ button:hover {
     color: #FFF;
     text-align: center;
     padding: 1em;
+}
+
+
+.hidden {
+    display: none;
 }

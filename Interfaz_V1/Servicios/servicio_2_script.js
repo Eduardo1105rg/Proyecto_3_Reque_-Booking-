@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const listaDeseosBtn = document.getElementById('listaDeseosBTN'); 
 
     comprarBtn.addEventListener('click', function() { 
-        window.location.href = '../Reserva y compras/pagos_y_reservas_1.html'; 
+        window.location.href = '../Reserva y compras/pagos_y_reservas_2.html'; 
     });
 
     reservarBtn.addEventListener('click', function() { 
-        window.location.href = '../Reserva y compras/pagos_y_reservas_1.html'; 
+        window.location.href = '../Reserva y compras/pagos_y_reservas_2.html'; 
     });
         
     listaDeseosBtn.addEventListener('click', function() { 
@@ -94,4 +94,3 @@ document.addEventListener('DOMContentLoaded', function() {
         return re.test(email);
     }
 });
-
