@@ -99,7 +99,7 @@
             </div>
 
             <div class="ficha" id="Empresa">
-                <img src=..\Servicios\imagenes_servicio_4\5p.jpg style="width:100%">
+                <img src=..\Servicios\imagenes_servicio_4\3p.jpg style="width:100%">
                 <h1>Recorrido por el pacuare en Rafting</h1>
                 <p id="Ubicacion">Limon</p>
                 <p id="Precio">120 dolares</p>
@@ -147,7 +147,6 @@
     <script>
         function irAPaginaServicio1() {
             window.location.href = "../Servicios//servicio_1_Alojamiento.html";
-            //window.location.href = "../Reserva y compras/pagos_y_reservas_1.html";
         }
 
         function irAPaginaServicio2() {
@@ -332,6 +331,20 @@
                 mostrarPaquetes()
             }
             else {
+                var opcionesServicios = document.getElementById("opcionesServicios");
+                var opcionesUbicaciones = document.getElementById("opcionesUbicaciones");
+                var opcionesPaquetes = document.getElementById("opcionesPaquetes");
+                if (opcionesServicios.style.display === "block") {
+                    opcionesServicios.style.display = "none";
+                }                
+
+                if (opcionesPaquetes.style.display === "block") {
+                    opcionesPaquetes.style.display = "none";
+                }
+
+                if (opcionesUbicaciones.style.display === "block") {
+                    opcionesUbicaciones.style.display = "none";
+                }
                 return
             }
         }
@@ -356,9 +369,9 @@
         }
 
         function mostrarServicios() {
-            var opcionesServicios = document.getElementById("opcionesUbicaciones");
-            if (opcionesServicios.style.display === "block") {
-                opcionesServicios.style.display = "none";
+            var opcionesUbicaciones = document.getElementById("opcionesUbicaciones");
+            if (opcionesUbicaciones.style.display === "block") {
+                opcionesUbicaciones.style.display = "none";
             }
 
             var opcionesPaquetes = document.getElementById("opcionesPaquetes");

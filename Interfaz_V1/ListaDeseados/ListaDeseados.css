@@ -79,7 +79,14 @@ h2 {
     border-radius: 16px;
 }
 
-
+.contenedorPagina {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    margin: 5vh;
+    background-color: #666;
+    padding: 4vh;
+}
 
 
 .opciones {
