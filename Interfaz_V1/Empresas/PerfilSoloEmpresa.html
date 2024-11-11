@@ -6,6 +6,7 @@
     <title>Nombre de la Empresa</title>
     <link rel="stylesheet" href="Empresas.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
 </head>
 <body>
     <h1>Los tilines adventure</h1>
@@ -73,7 +74,6 @@
         </div>
     </div>
     
-    <!-- Modal -->
     <div class="modal fade" id="modalservice" tabindex="-1" aria-labelledby="modalserviceLabel" aria-hidden="true">
         <div class="modal-dialog modal-custom">
             <div class="modal-content">
@@ -85,7 +85,6 @@
                     <form id="registerForm">
                         <label for="activity-type-modal">Ver del paquete:</label>
                         <div id="activity-type-modal" class="d-flex flex-wrap gap-3">
-                            <!-- Servicio 1 -->
                             <label class="d-flex flex-column align-items-center">
                                 <div class="image-container">
                                     <img src="../Imagenes/PuertoViejo.jpg" alt="Puerto" class="img-fluid">
@@ -93,23 +92,10 @@
                                         <h1>Puerto viejo</h1>
                                         <p>Ubicación: Costa Rica, Limón</p>
                                         <p>Precio: $70</p>
-                                        <button onclick="irABuscar5()">Acceder al servicio</button>
+                                        <button type="button" onclick="irABuscar5()">Acceder al servicio</button>
                                     </div>
                                 </div>
                             </label>
-                            <!-- Servicio 2 -->
-                            <label class="d-flex flex-column align-items-center">
-                                <div class="image-container">
-                                    <img src="../Imagenes/Pacuare.jpg" alt="Pacuare" class="img-fluid">
-                                    <div class="caption2">
-                                        <h1>Río pacuare</h1>
-                                        <p>Ubicación: Costa Rica, Siquirres</p>
-                                        <p>Precio: $90</p>
-                                        <button onclick="irABuscar2()">Acceder al servicio</button>
-                                    </div>
-                                </div>
-                            </label>
-                            <!-- Servicio 3 -->
                             <label class="d-flex flex-column align-items-center">
                                 <div class="image-container">
                                     <img src="../Imagenes/SelvaTropical.jpg" alt="Selva" class="img-fluid">
@@ -117,7 +103,7 @@
                                         <h1>Selva tropical en Veragua</h1>
                                         <p>Ubicación: Costa Rica, Limón</p>
                                         <p>Precio: $180</p>
-                                        <button onclick="irABuscar3()">Acceder al servicio</button>
+                                        <button type="button" onclick="irABuscar7()">Acceder al servicio</button>
                                     </div>
                                 </div>
                             </label>
@@ -134,7 +120,6 @@
         var modal = new bootstrap.Modal(document.getElementById('modalservice'));
         modal.show();
 
-        // Cerrar el modal cuando se hace clic en el botón de cerrar
         document.querySelector(".btn-close").addEventListener("click", function () {
             modal.hide();
         });
@@ -185,13 +170,59 @@
         function irABuscar3() {
             window.location.href = "../Servicios/servicio_3_veragua.html"; 
         }
-        function irABuscar5() {
-            window.location.href = "/Interfaz_V1/Servicios/servicio_2_cascada_Puerto.html";
 
-        }
 
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function irABuscar5() {
+
+
+    var modal = new bootstrap.Modal(document.getElementById('modalservice'));
+    modal.hide();
+
+
+    setTimeout(function() {
+        window.location.href = "/Interfaz_V1/Servicios/servicio_2_cascada_Puerto.html";  
+    }, 500); 
+}
+</script>
+
+<script>  
+function irABuscar6() {
+
+
+    var modal = new bootstrap.Modal(document.getElementById('modalservice'));
+    modal.hide();
+
+
+    setTimeout(function() {
+        window.location.href = "/Interfaz_V1/Servicios/servicio_4_pacuare.html";  
+    }, 500); 
+}
+</script>
+
+<script>  
+    function irABuscar7() {
+    
+    
+        var modal = new bootstrap.Modal(document.getElementById('modalservice'));
+        modal.hide();
+    
+    
+        setTimeout(function() {
+            window.location.href = "/Interfaz_V1/Servicios/servicio_3_veragua.html";  
+        }, 500); 
+    }
+    </script>
+
+
+
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
