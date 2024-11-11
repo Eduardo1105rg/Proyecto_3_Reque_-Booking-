@@ -6,6 +6,7 @@
     <title>Vámonos de viaje</title>
     <link rel="stylesheet" href="PrincipalEstilo.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -86,7 +87,7 @@ function showTopSlides() {
 }
 
 showTopSlides(); 
-setInterval(showTopSlides, 3000); // Esto es cada 3 segundos
+setInterval(showTopSlides, 1700); // Esto es cada 3 segundos
 
     </script>
 <section class="provincias">
@@ -102,7 +103,7 @@ setInterval(showTopSlides, 3000); // Esto es cada 3 segundos
                     <h3>San José</h3>
                     <p>Es el corazón del país, la hermosa capital del país del pura vida.</p>
                     <div class="link">
-                        <a href="#">Detalles</a>
+                        <a href="#" class="btn btn-primary">Detalles</a>
                     </div>
                 </div>
             </div>
@@ -117,7 +118,7 @@ setInterval(showTopSlides, 3000); // Esto es cada 3 segundos
                     <h3>Limón</h3>
                     <p>El lugar más hermoso del Caribe.</p>
                     <div class="link">
-                        <a href="#">Detalles</a>
+                        <a href="#" class="btn btn-primary">Detalles</a>
                     </div>
                 </div>
             </div>
@@ -132,7 +133,7 @@ setInterval(showTopSlides, 3000); // Esto es cada 3 segundos
                     <h3>Cartago</h3>
                     <p>El lugar más frío de Costa Rica.</p>
                     <div class="link">
-                        <a href="#">Detalles</a>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalservice">Detalles</a>
                     </div>
                 </div>
             </div>
@@ -147,7 +148,7 @@ setInterval(showTopSlides, 3000); // Esto es cada 3 segundos
                     <h3>Heredia</h3>
                     <p>Ni idea que hay ahí.</p>
                     <div class="link">
-                        <a href="#">Detalles</a>
+                        <a href="#" class="btn btn-primary">Detalles</a>
                     </div>
                 </div>
             </div>
@@ -162,7 +163,7 @@ setInterval(showTopSlides, 3000); // Esto es cada 3 segundos
                     <h3>Puntarenas</h3>
                     <p>Jaiba town.</p>
                     <div class="link">
-                        <a href="#">Detalles</a>
+                        <a href="#" class="btn btn-primary">Detalles</a>
                     </div>
                 </div>
             </div>
@@ -177,7 +178,7 @@ setInterval(showTopSlides, 3000); // Esto es cada 3 segundos
                     <h3>Guanacaste</h3>
                     <p>Es la parte de Costa Rica, pero premium.</p>
                     <div class="link">
-                        <a href="#">Detalles</a>
+                        <a href="#" class="btn btn-primary">Detalles</a>
                     </div>
                 </div>
             </div>
@@ -192,13 +193,37 @@ setInterval(showTopSlides, 3000); // Esto es cada 3 segundos
                     <h3>Alajuela</h3>
                     <p>Es igual de caliente que Limón.</p>
                     <div class="link">
-                        <a href="#">Detalles</a>
+                        <a href="#" class="btn btn-primary">Detalles</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<div class="modal fade" id="modalservice" tabindex="-1" aria-labelledby="modalserviceLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalserviceLabel">Cartago</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Cartago se caracteriza por ser una de las provincias más frías de Costa Rica, aparte es la segunda más pequeña del país, en si alberga mucha fauna y distintos tipos de vegetación, pero también se caracteriza por tener a la virgen de los Ángeles</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<script>  
+  function setModalContent(title, description) {
+    document.getElementById('modalPlaceTitle').innerText = title;
+    document.getElementById('modalPlaceDescription').innerText = description;
+}
+</script>
 
 <div class="btns botonesGenerales">
     <button id="inicioSesionBtn" onclick="irAPaginaSesion()">Iniciar sesión</button>
@@ -209,6 +234,26 @@ setInterval(showTopSlides, 3000); // Esto es cada 3 segundos
     <button id="adminPanelBtn" onclick="irAPaginaAdmin()">Panel Administrador</button>
     <button id="modPanelBtn" onclick="irAPaginaModeradores()">Panel Moderador</button>
 </div>
+<script>  
+document.querySelectorAll('.card .link a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevenir que el enlace recargue la página
+
+        // Obtener el lugar y la descripción
+        const placeTitle = this.closest('.card').querySelector('.front h3').innerText;
+        const placeDescription = this.closest('.card').querySelector('.back p').innerText;
+
+        // Asignar estos valores al modal
+        document.getElementById('modalPlaceTitle').innerText = placeTitle;
+        document.getElementById('modalPlaceDescription').innerText = placeDescription;
+
+        // Mostrar el modal
+        var myModal = new bootstrap.Modal(document.getElementById('modalservice'));
+        myModal.show();
+    });
+});
+</script>
+
 
 <script>
 window.onload = function() {
@@ -314,5 +359,7 @@ function irAPaginaModeradores() {
 }
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
