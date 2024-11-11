@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva o Compra de Servicios y Paquetes</title>
+    <link rel="stylesheet" href="pagos_y_reservas_styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Reserva o Compra de Servicios y Paquetes</h1>
+    </header>
+
+    <main>
+        <section class="booking">
+            <div>
+                
+            </div>
+            <div class="item">
+                <img src="imagenes_servicio_4/1p.jpg" alt="Descripción del servicio">
+
+                <div class="info">
+                    <h2>Recorrido por el rio Pacuare (para 4 personas)</h2>
+                    <p>Sumérjase en el entorno natural de Costa Rica en esta experiencia de rafting. 
+                        Descubra el río Pacuare, que es un lugar popular para hacer rafting, kayak y 
+                        navegación en el río.</p>
+                    <p>Precio: US$ 120,00</p>
+                    <!--<p>Disponibilidad: <span>Disponible</span></p>-->
+                    
+                    <label for="dateI">Fecha de Entrada:</label>
+                    <input type="datetime-local" id="dateI" name="dateI" required placeholder="MM/YY">
+                    
+                    <label for="dateF">Fecha de Salida:</label>
+                    <input type="datetime-local" id="dateF" name="dateF" required placeholder="MM/YY">
+                    
+                    <button class="check-availability">Consultar disponibilidad</button>
+                    <button class="reserve">Reservar</button>
+                    <button class="buy">Comprar</button>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="payment-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Detalles de Pago</h2>
+                <form id="payment-form">
+                    <label for="card-number">Número de Tarjeta</label>
+                    <input type="text" id="card-number" name="card-number" required>
+                    
+                    <label for="card-owner">Nombre del Propietario</label>
+                    <input type="text" id="card-owner" name="card-owner" required>
+                    
+                    <label for="expiry-date">Fecha de Vencimiento</label>
+                    <input type="text" id="expiry-date" name="expiry-date" required placeholder="MM/YY">
+                    
+                    <label for="security-code">Código de Seguridad</label>
+                    <input type="text" id="security-code" name="security-code" required>
+                    
+                    <button type="button" class="cancel">Cancelar</button>
+                    <button type="submit" class="continue">Continuar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="pagos_y_reservas_script.js"></script>
+</body>
+</html>
