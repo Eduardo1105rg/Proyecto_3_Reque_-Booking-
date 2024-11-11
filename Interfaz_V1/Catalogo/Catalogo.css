@@ -1,19 +1,21 @@
 html, body {
-    overflow-y: scroll hidden;
+    overflow-y: scroll;
     box-sizing: border-box;
     height: 100%;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
+.divEncabezado h1,
+.divFormulario h1 {
     margin: 0;
-    color: white;
+    color: #f0f0f0;
     font-size: 8vh;
 }
-  
+
 h2 {
     text-align: center;
-    color: white;
+    color: #4f6d4f;
     font-size: 3vh;
     margin: 0;
 }
@@ -23,10 +25,9 @@ h2 {
     top: 20px;
     right: 20px;
     padding: 10px 20px;
-    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    background: #6aaf4d;
     border: none;
-    color: rgb(113, 113, 113);
-    padding: 12px 16px;
+    color: white;
     font-size: 16px;
     cursor: pointer;
     border-radius: 16px;
@@ -45,31 +46,25 @@ h2 {
     color: white;
 }
 
-
 .contenidoSidebar {
     padding: 1vh;
     color: white;
 }
 
-
 .divEncabezado {
     height: 25vh;
-    background-image: url(Imagenes/encabezado1.jpg);
-    background-size: cover;
-    background-position: center;
+    background-color: #5a7d5a;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
 }
 
-
 .contenedorEncabezado {
     text-align: center;
-    backdrop-filter: contrast(50%);
     border-radius: 10vh;
-    padding-left: 2vh;
-    padding-right: 2vh;
+    padding: 2vh;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .espacioInput {
@@ -78,9 +73,8 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    background: #4f5f4f;
     border-radius: 30px;
-    overflow: hidden;
     cursor: pointer;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
     margin-top: 15px;
@@ -91,56 +85,47 @@ h2 {
     height: 4vh;
     border: none;
     outline: none;
-    caret-color: rgb(255, 81, 0);
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     border-radius: 30px;
     padding-left: 15px;
-    letter-spacing: 0.8px;
-    color: rgb(19, 19, 19);
+    color: #333;
     font-size: 13.4px;
 }
 
 .iconoLupa {
     font-size: 16px;
-    color: rgb(150, 150, 150);
+    color: #666;
     margin-left: -25px;
     cursor: pointer;
 }
 
 .btn {
-    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    background: #6aaf4d;
     border: none;
-    color: rgb(113, 113, 113);
+    color: white;
     padding: 12px 16px;
     font-size: 16px;
     cursor: pointer;
-    margin: 1vh;
     border-radius: 16px;
 }
-.drop {
-    position: relative;
-    display: inline-block;
-}
+
 .botonDrop {
     display: none;
-    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    background: #4f6d4f;
     border: none;
-    color: rgb(113, 113, 113);
+    color: white;
     padding: 12px 16px;
     font-size: 16px;
     cursor: pointer;
-    margin: 1vh;
     border-radius: 16px;
 }
-
-
 
 .opciones {
     display: none;
     position: absolute;
     left: 100%;
     top: 0;
-    background-color: #f1f1f1;
+    background-color: #4f5f4f;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     padding: 10px;
@@ -149,113 +134,74 @@ h2 {
 }
 
 .opciones select {
-    color: black;
-    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    background-color: #6aaf4d;
     border: none;
-    color: rgb(113, 113, 113);
-    padding: 12px 16px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 1vh;
-    border-radius: 16px;
-}
-
-.checkboxes-opciones {
-    margin-top: 10px;
-    padding-left: 15px;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .checkboxes-opciones label {
     display: block;
-    color: black;
-    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
-    border: none;
-    color: rgb(113, 113, 113);
-    padding: 12px 16px;
-    font-size: 16px;
+    color: white;
+    padding: 10px;
     cursor: pointer;
-    margin: 0;
-    border-radius: 16px;
+    border-radius: 8px;
 }
-
 
 .divPagina {
     display: grid;
-    background-color: rgb(225, 225, 225);
-    height: 75vh, auto;
-    
+    background-color: #f0f0f0;
+    height: auto;
 }
 
 .contenedorPagina {
-    border-radius: 10vh;
-    height: 75vh, auto;
+    border-radius: 10px;
     display: grid;
     grid-template-columns: auto auto auto;
     margin: 5vh;
-    background-color: rgb(115, 115, 115);
+    background-color: #666;
     padding: 4vh;
-    
 }
 
 .ficha {
-    background-color: rgb(226, 226, 226);
+    background-color: #6aaf4d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
     text-align: center;
-    font-family: arial;
-    
+    color: white;
 }
-  
+
 .precio {
-    color: grey;
+    color: #333;
     font-size: 22px;
 }
 
 .ficha button {
     border: none;
-    outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
-    text-align: center;
+    background-color: #333;
     cursor: pointer;
     width: 100%;
     font-size: 18px;
 }
 
-
 .divFormulario {
-    background-color: #b08255;
+    background-color: #4f6d4f;
     color: white;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.divFormulario h1 {
-    font-size: 5vh;
-    margin: 0;
-    font-weight: bold;
-}
-
-.divFormulario h2 {
-    font-size: 4vh;
-    margin: 10px 0 0;
-}
-
 .divFormulario:hover {
-    transform: translateY(-5px); /* Efecto de elevación */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
-
-.divFormulario:active {
-    transform: translateY(0); /* Reacción de presión */
-}
-
 
 #formulario {
     display: none;

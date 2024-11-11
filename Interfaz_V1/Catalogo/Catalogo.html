@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Catalogo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <div class="divEncabezado">
         <button class="abrirSidebar" onclick=openSidebar()>Abrir Barra de Herramientas</button>
         <div id="sidebar" class="sidebar">
+            <h2>Barra de Herramientas</h2>
             <div class="contenidoSidebar">
-                <h2>Barra de Herramientas</h2>
                 <button class="btn"></i> Comprar Servicio</button>
                 <button class="btn"></i> Reservar Servicio</button>
                 <button class="btn"></i> Agregar Servicio a Lista de Deseos</button>
@@ -68,92 +69,62 @@
     <div class="divPagina">
         <div class="contenedorPagina">
             <div class="ficha" id="Servicio">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
+                <img src=..\Servicios\imagenes_servicio_1\288437695.jpg style="width:100%">
+                <h1>Bambutel Cocles</h1>
                 <p id="Ubicacion">Limon</p>
-                <p id="Precio">50 peso</p>
-                <p id="Tipo">Paquete</p>
+                <p id="Precio">34354 colones la noche</p>
+                <p id="Tipo">Individual</p>
                 <p id="TipoServicio">Hotel</p>
-                <p><button>Acceder al servicio</button></p>
+                <p><button onclick=irAPaginaServicio1()>Acceder al servicio</button></p>
             </div>
 
-            <div class="ficha" id="Empresa">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
+            <div class="ficha" id="Servicio">
+                <img src=..\Servicios\imagenes_servicio_2\3c.jpg style="width:100%">
+                <h1>Caminata por la jungla de Puerto Viejo</h1>
                 <p id="Ubicacion">Limon</p>
-                <p id="Precio">50 peso</p>
+                <p id="Precio">525 doleares</p>
                 <p id="Tipo">Individual</p>
                 <p id="TipoServicio">Tour</p>
-                <p><button>Acceder al servicio</button></p>
+                <p><button onclick=irAPaginaServicio2()>Acceder al servicio</button></p>
             </div>
 
             <div class="ficha" id="Servicio">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
+                <img src=..\Servicios\imagenes_servicio_3\3t.jpg style="width:100%">
+                <h1>Paseo por la selva tropical de Veragua</h1>
                 <p id="Ubicacion">Puntarenas</p>
                 <p id="Precio">50 peso</p>
+                <p id="Tipo">Individual</p>
+                <p id="TipoServicio">Restaurante</p>
+                <p><button onclick=irAPaginaServicio3()>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Empresa">
+                <img src=..\Servicios\imagenes_servicio_4\5p.jpg style="width:100%">
+                <h1>Recorrido por el pacuare en Rafting</h1>
+                <p id="Ubicacion">Limon</p>
+                <p id="Precio">120 dolares</p>
+                <p id="Tipo">Individual</p>
+                <p id="TipoServicio">Otros</p>
+                <p><button onclick=irAPaginaServicio4()>Acceder al servicio</button></p>
+            </div>
+
+            <div class="ficha" id="Empresa">
+                <img src=Imagenes\Capitan1303.jpg style="width:100%">
+                <h1>Restaurante La Almeja</h1>
+                <p id="Ubicacion">Puntarenas</p>
+                <p id="Precio"></p>
                 <p id="Tipo">Individual</p>
                 <p id="TipoServicio">Restaurante</p>
                 <p><button>Acceder al servicio</button></p>
             </div>
 
             <div class="ficha" id="Paquete">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
+                <img src=Imagenes\60.jpg style="width:100%">
+                <h1>Vuelta por Guanacaste</h1>
                 <p id="Ubicacion">Puntarenas</p>
-                <p id="Precio">50 peso</p>
-                <p id="Tipo">Individual</p>
-                <p id="TipoServicio">Restaurante</p>
-                <p><button>Acceder al servicio</button></p>
-            </div>
-
-            <div class="ficha" id="Empresa">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
-                <p id="Ubicacion">Puntarenas</p>
-                <p id="Precio">50 peso</p>
-                <p id="Tipo">Individual</p>
-                <p id="TipoServicio">Restaurante</p>
-                <p><button>Acceder al servicio</button></p>
-            </div>
-
-            <div class="ficha" id="Paquete">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
-                <p id="Ubicacion">Puntarenas</p>
-                <p id="Precio">50 peso</p>
-                <p id="Tipo">Individual</p>
-                <p id="TipoServicio">Restaurante</p>
-                <p><button>Acceder al servicio</button></p>
-            </div>
-
-            <div class="ficha" id="Empresa">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
-                <p id="Ubicacion">Puntarenas</p>
-                <p id="Precio">50 peso</p>
-                <p id="Tipo">Individual</p>
-                <p id="TipoServicio">Restaurante</p>
-                <p><button>Acceder al servicio</button></p>
-            </div>
-
-            <div class="ficha" id="Servicio">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
-                <p id="Ubicacion">Puntarenas</p>
-                <p id="Precio">50 peso</p>
-                <p id="Tipo">Individual</p>
-                <p id="TipoServicio">Restaurante</p>
-                <p><button>Acceder al servicio</button></p>
-            </div>
-
-            <div class="ficha" id="Servicio">
-                <img src=Imagenes\encabezado.jpg style="width:100%">
-                <h1>Prueba</h1>
-                <p id="Ubicacion">Puntarenas</p>
-                <p id="Precio">50 peso</p>
-                <p id="Tipo">Individual</p>
-                <p id="TipoServicio">Restaurante</p>
+                <p id="Precio">400 dolares</p>
+                <p id="Tipo">Paquete</p>
+                <p id="TipoServicio">Otros</p>
                 <p><button>Acceder al servicio</button></p>
             </div>
         </div>
@@ -174,6 +145,22 @@
     </div>
 
     <script>
+        function irAPaginaServicio1() {
+            window.location.href = "../Servicios//servicio_1_Alojamiento.html";
+        }
+
+        function irAPaginaServicio2() {
+            window.location.href = "../Servicios//servicio_2_cascada_Puerto.html";
+        }
+
+        function irAPaginaServicio3() {
+            window.location.href = "../Servicios//servicio_3_veragua.html";
+        }
+
+        function irAPaginaServicio4() {
+            window.location.href = "../Servicios//servicio_4_pacuare.html";
+        }
+        
         function mostrarFichasServicios() {
             const paquetes = document.querySelectorAll(".ficha#Paquete");
             paquetes.forEach(paquete => {

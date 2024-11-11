@@ -1,76 +1,84 @@
 
-html, body { 
-    overflow-y: hidden;
+html, body {
+    overflow-y: scroll;
     box-sizing: border-box;
     height: 100%;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.divPagina {
-    display: flex;
-    background-color: #E6D39E;
-    align-items: center;
-    justify-content: center;
-    height: 75vh;
-}
-
-.contenedorPagina {
-    display: none;
-    grid-template-columns: 1fr; /* Una sola columna */
-    border-radius: 10vh;
-    height: auto;
-    margin: 5vh;
-    background-color: #FAFAFA;
-    padding: 4vh;
-    max-width: 80vw; /* Limitar el ancho para centrar mejor */
-}
-
-
-h1 {
+.divEncabezado h1,
+.divFormulario h1 {
     margin: 0;
-    color:#2F3033;
+    color: #f0f0f0;
     font-size: 8vh;
 }
-  
+
 h2 {
     text-align: center;
-    color:#2F3033;
+    color: #4f6d4f;
     font-size: 3vh;
     margin: 0;
 }
 
+.abrirSidebar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #6aaf4d;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+}
+
+.contenidoSidebar {
+    padding: 1vh;
+    color: white;
+}
 
 .divEncabezado {
     height: 25vh;
-    background-size: cover;
-    background-position: center;
+    background-color: #5a7d5a;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #227022;
+    color: white;
 }
-
 
 .contenedorEncabezado {
     text-align: center;
-    backdrop-filter: contrast(50%);
     border-radius: 10vh;
-    padding-left: 2vh;
-    padding-right: 2vh;
+    padding: 2vh;
+    background-color: rgba(0, 0, 0, 0.5);
 }
-
 
 
 .btn {
-    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    background: #6aaf4d;
     border: none;
-    color: rgb(113, 113, 113);
+    color: white;
     padding: 12px 16px;
     font-size: 16px;
     cursor: pointer;
-    margin: 1vh;
     border-radius: 16px;
 }
+
 
 
 
@@ -79,7 +87,7 @@ h2 {
     position: absolute;
     left: 100%;
     top: 0;
-    background-color: #f1f1f1;
+    background-color: #4f5f4f;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     padding: 10px;
@@ -89,28 +97,24 @@ h2 {
 
 
 .ficha {
-    display: none;
-    background-color: rgb(226, 226, 226);
+    background-color: #6aaf4d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
     text-align: center;
-    font-family: arial;
-    
+    color: white;
 }
-  
+
 .precio {
-    color: grey;
+    color: #333;
     font-size: 22px;
 }
 
 .ficha button {
     border: none;
-    outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
-    text-align: center;
+    background-color: #333;
     cursor: pointer;
     width: 100%;
     font-size: 18px;
