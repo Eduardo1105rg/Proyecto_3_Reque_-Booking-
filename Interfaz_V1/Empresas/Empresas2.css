@@ -2,20 +2,24 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FAFAFA;
+    background: linear-gradient(135deg, #227050, #88e99e); 
+    color: #FAFAFA;
 }
 
 h1 {
     text-align: center;
-    color: #333;
-    background-color: #227050;
+    color: #FAFAFA;
+    background-color: #267215; 
+    padding: 15px;
+    margin: 0;
 }
 
 h2 {
     background-color: #2F3033; 
-    color: white; 
+    color: #FAFAFA;
     padding: 8px;
     text-align: center;
+    margin: 0;
 }
 
 #empresa-options {
@@ -39,8 +43,8 @@ h2 {
 }
 
 #empresa-options button {
-    background-color: #0066cc;
-    color: white;
+    background-color: #227050;
+    color: #FAFAFA;
     border: none;
     padding: 15px 30px;
     font-size: 1.2rem;
@@ -50,7 +54,7 @@ h2 {
 }
 
 #empresa-options button:hover {
-    background-color: #004c99;
+    background-color: #2d6139; 
     transform: scale(1.1);
 }
 
@@ -59,7 +63,8 @@ h2 {
     flex-direction: column; 
     text-align: center;
     padding: 50px;
-    background-color: #E6D39E;
+    background-color: #2F3033; 
+    color: #FAFAFA;
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -68,9 +73,8 @@ h2 {
 
 .company-services h3 {
     margin-top: 20px;
-    color: #0066cc;
+    color: #FAFAFA;
 }
-
 
 .company-services .service {
     display: block;
@@ -84,28 +88,28 @@ h2 {
 
 .company-services .service img {
     width: 60%;
-    height: auto; 
-    object-fit: cover; 
+    height: auto;
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
 .company-services .service:hover img {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .company-services .service .caption {
     padding: 20px;
-    background-color: #fff;
+    background-color: #145003; 
     text-align: left;
 }
 
-.company-services .service h1 {
-    color: #0066cc;
+.company-services .service h1 { 
+    color: #919293;
     font-size: 1.5rem;
 }
 
 .company-services .service p {
-    color: #555;
+    color: #1b1b1b;
 }
 
 .prev, .next {
@@ -132,19 +136,10 @@ h2 {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Responsividad */
 @media (max-width: 768px) {
     .company-services {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content 
     }
-
-    .company-services .service {
-        width: 100%;
-    }
-
-    #empresa-options button {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-}

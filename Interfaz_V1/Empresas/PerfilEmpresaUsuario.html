@@ -25,32 +25,32 @@
         <h3>Servicios que ofrecemos:</h3>
         
         <div class="service">
-            <img src="../Imagenes/VolcanArenal.jpg" alt="Volcán Arenal">
+            <img src="../Imagenes/PuertoViejo.jpg" alt="Volcán Arenal">
             <div class="caption">
-                <h1>Volcán Arenal</h1>
-                <p>Ubicación: Costa Rica</p>
-                <p>Precio: $50</p>
-                <button>Acceder al servicio</button>
+                <h1>Puerto viejo</h1>
+                <p>Ubicación: Costa Rica, Limón</p>
+                <p>Precio: $70</p>
+                <button onclick="irABuscar()">Acceder al servicio</button>
             </div>
         </div>
         
         <div class="service">
-            <img src="../Imagenes/MarinoBallena.jfif" alt="Marino Ballena">
+            <img src="../Imagenes/Pacuare.jpg" alt="Marino Ballena">
             <div class="caption">
-                <h1>Marino Ballena</h1>
-                <p>Ubicación: Costa Rica</p>
-                <p>Precio: $40</p>
-                <button>Acceder al servicio</button>
+                <h1>Río Pacuare</h1>
+                <p>Ubicación: Costa Rica, Siquirres</p>
+                <p>Precio: $90</p>
+                <button onclick="irABuscar2()">Acceder al servicio</button>
             </div>
         </div>
         
         <div class="service">
-            <img src="../Imagenes/RioCeleste.jpg" alt="Río Celeste">
+            <img src="../Imagenes/SelvaTropical.jpg" alt="SelvaTropical">
             <div class="caption">
-                <h1>Río Celeste</h1>
-                <p>Ubicación: Costa Rica</p>
-                <p>Precio: $60</p>
-                <button>Acceder al servicio</button>
+                <h1>Tour veragua</h1>
+                <p>Ubicación: Veragua, Cahuita</p>
+                <p>Precio: $180</p>
+                <button onclick="irABuscar3()">Acceder al servicio</button>
             </div>
         </div>
 
@@ -77,5 +77,21 @@
             selectedCompany.style.display = 'block';
         }
     </script>
+
+<script>
+
+
+    function irABuscar() {
+        window.location.href = "../Servicios/servicio_2_cascada_Puerto.html"; 
+    }
+
+    function irABuscar2() {
+        window.location.href = "../Servicios/servicio_4_pacuare.html"; 
+    }
+    function irABuscar3() {
+        window.location.href = "../Servicios/servicio_3_veragua.html"; 
+    }
+
+</script>
 </body>
 </html>
